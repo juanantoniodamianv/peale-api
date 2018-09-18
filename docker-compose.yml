@@ -1,0 +1,11 @@
+version: '2'
+services:
+  backend:
+    image: backend.nvp-sermons
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/var/node
+    ports:
+      - '1337:1337'
