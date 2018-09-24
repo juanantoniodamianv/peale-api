@@ -4,6 +4,7 @@
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
+var bcrypt = require("bcrypt");
 
 module.exports = {
 
@@ -57,6 +58,25 @@ module.exports = {
     return _.omit(this, 'password');
   },
 
+  beforeCreate: async (values, cb) => {
+    bcrypt.hash(values.password, 10, function (err, hash) {
+      if (err) return cb(err);
+      values.password = hash;
+      cb();
+    });
+  },
 
+  beforeUpdate: function(values, cb){
+    if(values.password) {
+      bcrypt.hash(values.password, 10, function (err, hash) {
+        if (err) return cb(err);
+        values.password = hash;
+        cb();
+      })
+    } else {
+      cb();
+    }
+  },
+  
 };
 

@@ -31,8 +31,18 @@ the account verification message.)`,
       required: true,
       type: 'string',
       maxLength: 200,
+      minLength: 6,
       example: 'passwordlol',
       description: 'The unencrypted password to use for the new account.'
+    },
+
+    confirmPassword: {
+      required: true,
+      type: 'string',
+      maxLength: 200,
+      minLength: 6,
+      example: 'passwordlol',
+      description: 'Password confirm.'
     },
 
     firstName:  {
@@ -64,6 +74,11 @@ the account verification message.)`,
       description: 'The provided email address is already in use.',
     },
 
+    passwordDoNotMatch: {
+      statusCode: 409,
+      description: 'The provided passwords do not match.'
+    }
+
   },
 
 
@@ -71,11 +86,15 @@ the account verification message.)`,
 
     var newEmailAddress = inputs.username.toLowerCase();
 
+    if (inputs.password !== inputs.confirmPassword) {
+      throw { passwordDoNotMatch: 'The provided password do not match.' };
+    }
+
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
     var newUserRecord = await User.create(Object.assign({
-      emailAddress: newEmailAddress,
-      password: await sails.helpers.passwords.hashPassword(inputs.password),
+      username: newEmailAddress,
+      password: inputs.password,
       firstName: inputs.firstName,
       lastName: inputs.lastName,
     }))
@@ -83,34 +102,9 @@ the account verification message.)`,
     .intercept({name: 'UsageError'}, 'invalid')
     .fetch();
 
-    // If billing feaures are enabled, save a new customer entry in the Stripe API.
-    // Then persist the Stripe customer id in the database.
-/*     if (sails.config.custom.enableBillingFeatures) {
-      let stripeCustomerId = await sails.helpers.stripe.saveBillingInfo.with({
-        emailAddress: newEmailAddress
-      });
-      await User.update(newUserRecord.id).set({
-        stripeCustomerId
-      });
-    } */
-
+    sails.log.info(newUserRecord);
     // Store the user's new id in their session.
     this.req.session.userId = newUserRecord.id;
-
-    /* if (sails.config.custom.verifyEmailAddresses) {
-      // Send "confirm account" email
-      await sails.helpers.sendTemplateEmail.with({
-        to: newEmailAddress,
-        subject: 'Please confirm your account',
-        template: 'email-verify-account',
-        templateData: {
-          fullName: inputs.fullName,
-          token: newUserRecord.emailProofToken
-        }
-      });
-    } else {
-      sails.log.info('Skipping new account email verification... (since `verifyEmailAddresses` is disabled)');
-    } */
 
     // Since everything went ok, send our 200 response.
     return exits.success();
