@@ -12,7 +12,7 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    fileName: {},
+    /* fileName: {},
 
     date: {},
 
@@ -28,7 +28,11 @@ module.exports = {
 
     duration: {},
 
-    package: {},
+    package: {
+      type: "string",
+      isIn: ['base', 'premium'],
+      defaultsTo: 'base'
+    }, */
 
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

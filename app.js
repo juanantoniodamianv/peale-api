@@ -19,7 +19,9 @@
  * For more information see:
  *   https://sailsjs.com/anatomy/app.js
  */
-
+// dotenv for environment variables, see .env file on root directory
+var dotenv = require('dotenv');
+dotenv.load();
 
 // Ensure we're in the project directory, so cwd-relative paths work as expected
 // no matter where we actually lift from.
