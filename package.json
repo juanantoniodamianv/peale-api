@@ -10,6 +10,7 @@
     "bcrypt": "^3.0.1",
     "dotenv": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
+    "mandrill-api": "^1.0.45",
     "nodemon": "^1.18.4",
     "sails": "^1.0.1",
     "sails-hook-orm": "^2.0.0-16",
