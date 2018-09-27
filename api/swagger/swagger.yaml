@@ -1,0 +1,73 @@
+swagger: '2.0'
+info:
+  title: Peale Foundation API
+  description: Peale Foundation APIs descriptions
+  version: "1.0.0"
+host: localhost:1337
+schemes:
+  - http
+basePath: /v1
+produces:
+  - application/json
+securityDefinitions:
+  accessToken:
+    type: "apiKey"
+    name: "authorization"
+    in: "header"
+  accessAdminToken:
+    type: "apiKey"
+    name: "authorization"
+    in: "header"
+paths:
+  /signin:
+    put:
+      summary: User signin.
+      description: Sign in using the provided email and password combination.
+      parameters:
+      - name: UserCredentials
+        in: body
+        description: Username or Email account and credentials.
+        required: true
+        schema:
+          $ref: '#/definitions/UserCredentials'
+      tags:
+      - Session
+      responses:
+        201:
+          description: Session created
+          schema:
+            $ref: '#/definitions/SessionNew'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+definitions:
+  UserCredentials:
+    type: object
+    properties:
+      username:
+        type: string
+        description: User's username
+      password:
+        type: string
+        description: User's password
+
+  SessionNew:
+    type: object
+    properties:
+      accessToken:
+        type: string
+        description: User's session token
+        format: jwt
+
+  Error:
+    type: object
+    properties:
+      statusCode:
+        type: integer
+        format: int32
+      message:
+        type: string
+      error:
+        type: string

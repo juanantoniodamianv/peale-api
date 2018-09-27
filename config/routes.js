@@ -26,9 +26,9 @@ module.exports.routes = {
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
-  'POST /signup': { action: 'v1/user-account/signup' },
-  'PUT /signin': { action: 'v1/user-account/signin' },
-  'POST /forgot-password': { action: 'v1/user-account/forgot-password' },
+  'POST /v1/signup': { action: 'v1/user-account/signup' },
+  'PUT /v1/signin': { action: 'v1/user-account/signin' },
+  'POST /v1/forgot-password': { action: 'v1/user-account/forgot-password' },
 
 
 
