@@ -17,6 +17,9 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+  '*': ['isAuthorized'],
+
+  'v1/user-account/*': true,
+  //'v1/user-account/update-account': 'isAuthorized',
 
 };

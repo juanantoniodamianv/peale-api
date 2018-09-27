@@ -50,7 +50,7 @@ module.exports = {
       throw { unauthorized: 'The provided username/email does not match any user in the database.' };
     }
 
-    User.sendEmailForgotPassword(userRecord, hashPassword);
+    User.sendEmailForgotPassword(userRecord, 'hash password');
 
     return exits.success('An email has been sent, please check your inbox to reset you password.');
 
