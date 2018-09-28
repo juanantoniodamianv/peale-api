@@ -86,7 +86,7 @@ module.exports = {
       "html": "<div><p>Dear " + receiveName + "</p><p>Hi! We recently had a request to reset your account password at Peale Foundation App.</p><p>If you see that the above information is not correct, contact us at support@ballastlane.com</p></div><div><p>To reset your password account, click on the following link </p></div>",
       "subject": "Forgot password?",
       "from_email": "support@ballastlane.com",
-      "from_name": "Support Ballastlane - CCA CMS",
+      "from_name": "Ballast Lane Support",
       "to": [{
         "email": user.username,
         "name": user.lastName + ', ' + user.firstName,
