@@ -41,6 +41,55 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
+  /signup:
+    post:
+      summary: User signup.
+      description: Sign up using the provided username/email, password and password confirm.
+      parameters:
+      - name: UserCredentialsSignUp
+        in: body
+        description: Username or Email account, Password and Password Confirm.
+        required: true
+        schema:
+          $ref: '#/definitions/UserCredentialsSignUp'
+      tags:
+      - Session
+      responses:
+        201:
+          description: Account created succesfully.
+          schema:
+            $ref: '#/definitions/SessionNew'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /forgot-password:
+    post:
+      summary: Forgot password
+      description: This action attempts to recovery password for one user account with the email/username provided.
+      parameters:
+      - name: UsernameForgotPassword
+        in: body
+        description: Username/Email for forgot password recovery.
+        required: true
+        schema:
+          $ref: '#/definitions/UsernameForgotPassword'
+      tags:
+      - Session
+      responses:
+        201:
+          description: An email has been sent, please check your inbox to reset you password.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+
+
+
+
+
+
 
 definitions:
   UserCredentials:
@@ -52,6 +101,26 @@ definitions:
       password:
         type: string
         description: User's password
+  
+  UserCredentialsSignUp:
+    type: object
+    properties:
+      username:
+        type: string
+        description: User's username
+      password:
+        type: string
+        description: User's password
+      confirmPassword:
+        type: string
+        description: User's password confirm
+  
+  UsernameForgotPassword:
+    type: object
+    properties:
+      username:
+        type: string
+        description: User's username
 
   SessionNew:
     type: object
