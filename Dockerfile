@@ -1,5 +1,5 @@
 # Node JS LTS version, Jul 4th 2018
-FROM keymetrics/pm2:10-alpine
+FROM keymetrics/pm2:latest-alpine	
 
 LABEL maintainer="https://ballastlane.com/"
 

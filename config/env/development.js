@@ -22,12 +22,14 @@ module.exports = {
   }, */
   datastores: {
     default: {
-      adapter: 'sails-mysql',
+      /* adapter: 'sails-mysql',
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME 
+      database: process.env.DB_NAME  */
+      adapter: require('sails-mysql'),
+      url: process.env.MYSQL_URL,
     }
   },
 
