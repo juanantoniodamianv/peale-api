@@ -12,27 +12,57 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    /* fileName: {},
+    fileName: {
+      type: "string",
+      required: true,
+      unique: true,
+    },
 
-    date: {},
+    date: {
+      type: "string",
+      columnType: "datetime",
+      required: true
+    },
 
-    title: {},
+    title: {
+      type: "string",
+      required: true
+    },
 
-    description: {},
+    description: {
+      type: "string",
+      columnType: "longtext"
+    },
 
-    bibleVerse: {},
+    bibleVerse: {
+      type: "string"
+    },
 
-    bibleVerseText: {},
+    bibleVerseText: {
+      type: "string",
+      maxLength: 500,
+    },
 
-    type: {},
+    type: {
+      type: "string",
+      isIn: ['video', 'audio'],
+      required: true
+    },
 
-    duration: {},
+    duration: {
+      type: "number"
+    },
 
     package: {
       type: "string",
-      isIn: ['base', 'premium'],
-      defaultsTo: 'base'
-    }, */
+      isIn: ["base", "premium"],
+      defaultsTo: "base"
+    },
+
+    views: {
+      type: "number",
+      defaultsTo: 0
+    }
 
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

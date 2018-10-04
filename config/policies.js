@@ -22,4 +22,6 @@ module.exports.policies = {
   'v1/user-account/*': true,
   //'v1/user-account/update-account': 'isAuthorized',
 
+  'v1/sermon/*': true,
+
 };
