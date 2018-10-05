@@ -19,20 +19,20 @@ module.exports = async function (req, res, next) {
         token = credentials;
       }
     } else {
-      return ResponseService.json(401, res, "Format is Authorization: Bearer [token]");
+      return res.json(401, {error: 'Format is Authorization: Bearer [token]'});
     }
   } else if (req.param('token')) {
     token = req.param('token');
 
     delete req.query.token;
   } else {
-    return ResponseService.json(401, res, "No authorization header was found");
+    return res.json(401, {error: 'No authorization header was found'});
   }
 
   await sails.helpers.jwt.verify(token, (err, decoded) => {
-    if (err) return ResponseService.json(401, res, 'Invalid Token!');
+    if (err) return res.json(401, {error: 'Invalid Token!'});
     req.token = token;
-    User.findOne({ id: decoded.id}).then((user) => {
+    User.find({ id: decoded.id}).limit(1).then((user) => {
       req.current_user = user;
       next();
     })

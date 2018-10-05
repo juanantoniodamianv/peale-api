@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Show',
+  friendlyName: 'Show sermon for me',
 
 
-  description: 'Show sermon.',
+  description: 'Show sermon me.',
 
 
   inputs: {

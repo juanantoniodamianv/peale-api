@@ -1,14 +1,14 @@
 module.exports = {
 
 
-  friendlyName: 'List all sermons',
+  friendlyName: 'List all sermons with user logged data',
 
 
-  description: 'Retrieve all sermons.',
+  description: 'List all sermons to me.',
 
 
   inputs: {
-    
+
   },
 
 
@@ -43,7 +43,6 @@ module.exports = {
     var responseData = { sermons }
 
     return exits.success(responseData);
-
   }
 
 

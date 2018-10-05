@@ -19,7 +19,7 @@ module.exports = {
 
     callback: {
       description: 'Callback.',
-      type: 'string',
+      type: 'ref',
       required: true
     }
   },
