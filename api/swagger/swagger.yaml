@@ -84,9 +84,80 @@ paths:
           schema:
             $ref: '#/definitions/Error'
 
+  /sermons:
+    get:
+      summary: List of all sermons.
+      description: Retrieve all sermons data.
+      responses:
+        200:
+          description: Succesfully retrieved all sermons.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
 
+  /sermons/{id}:
+    get:
+      summary: Show one sermon.
+      description: Retrieve one sermon data.
+      parameters:
+        - in: path
+          name: id
+          description: The sermon id.
+          type: string
+          required: true
+      responses:
+        200:
+          description: Succesfully retrieved sermon.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
 
+  /sermons-me:
+    get:
+      summary: List of all sermons with personalized data User.
+      description: Retrieve all sermons data.
+      parameters:
+        - in: header
+          name: token
+          description: Authorization token.
+          type: string
+          required: true
+      tags:
+      - Session
+      responses:
+        200:
+          description: Succesfully retrieved all sermons.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
 
+  /sermons-me/{id}:
+    get:
+      summary: Show one sermon with personalized data User.
+      description: Retrieve one sermon data.
+      parameters:
+        - in: header
+          name: token
+          description: Authorization token.
+          type: string
+          required: true
+        - in: path
+          name: id
+          description: The sermon id.
+          type: string
+          required: true
+      tags:
+      - Session
+      responses:
+        200:
+          description: Succesfully retrieved sermon.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
 
 
 
