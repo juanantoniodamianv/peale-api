@@ -26,7 +26,15 @@ module.exports = {
       statusCode: 404,
       description: 'Unauthorized request.',
     },
-  },
+    success: {
+      statusCode: 200,
+      description: 'Succesfully retrieved this sermon.',
+    },
+    
+    unauthorized: {
+      statusCode: 404,
+      description: 'Unauthorized request.',
+    }, },
 
 
   fn: async function (inputs, exits) {

@@ -44,17 +44,7 @@ module.exports = {
 
     const url = adapter.url('getObject', { s3params: { Key: inputs.fileName } })
     return exits.success(url);
-    /* var getParams = {
-      Bucket: 'pealefoundation-sermons',
-      Key: inputs.fileName
-    }
-
-    s3.getObject(getParams, (err, data) => {
-      if (err) return exits.error('Error on retrieved object.');
-      let objectData = data.Body.toString('utf-8');
-      return exits.success(objectData);
-    }); */
-
+    
   }
 
 

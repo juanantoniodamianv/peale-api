@@ -38,6 +38,10 @@ module.exports.routes = {
   'GET /v1/sermons-me': { action: 'v1/sermon-me/index' },
   'GET /v1/sermons-me/:id': { action: 'v1/sermon-me/show' },
 
+  /* Add/Remove Sermon to my favorites */
+  'POST /v1/sermons-me/:id/add-favorite': { action: 'v1/sermon-me/add-favorite' },
+  'DELETE /v1/sermons-me/:id/remove-favorite': { action: 'v1/sermon-me/remove-favorite' },
+
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗

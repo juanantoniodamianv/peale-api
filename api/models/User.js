@@ -48,9 +48,12 @@ module.exports = {
       type: "number"
     },
 
-    /* favorites: {},
+    favorites: {
+      collection: "favorite",
+      via: "user"
+    },
 
-    played: {},
+    /*played: {},
 
     tags: {}
     */

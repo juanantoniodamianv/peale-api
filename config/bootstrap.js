@@ -8,38 +8,43 @@
  * For more information on bootstrapping your app, check out:
  * https://sailsjs.com/config/bootstrap
  */
+var moment = require('moment');
 
 module.exports.bootstrap = async function(done) {
+  /*********** USERS ***********/
 
-  // By convention, this is a good place to set up fake data during development.
-  //
-  // For example:
-  // ```
-  // // Set up fake development data (or if we already have some, avast)
-  // if (await User.count() > 0) {
-  //   return done();
-  // }
-  //
-  // await User.createEach([
-  //   { emailAddress: 'ry@example.com', fullName: 'Ryan Dahl', },
-  //   { emailAddress: 'rachael@example.com', fullName: 'Rachael Shaw', },
-  //   // etc.
-  // ]);
-  // ```
+  var users = [
+    {
+      "username": "antonio.vargas@walloom.com",
+      "password": "1234567890",
+      "firstName": "Juan Antonio Damian",
+      "lastName": "Vargas",
+    }
+  ];
 
-  // Don't forget to trigger `done()` when this bootstrap function's logic is finished.
-  // (otherwise your server will never lift, since it's waiting on the bootstrap)
+  users.forEach(element => {
+    User.findOrCreate({ username: element.username}, {
+      username: element.username,
+      password: element.password,
+      firstName: element.firstName,
+      lastName: element.lastName
+    })
+    .exec(async (err, user, wasCreated) => {
+      if (err) { return done(err) }
+      if (wasCreated) { 
+        sails.log.info(`Created a new user: ${user.username}`)
+      } else {
+        sails.log.warn(`Found existing user: ${user.username}`)
+      }
+    })
+  });
 
-  if (await User.count({ username: 'antonio.vargas@walloom.com' }) === 0) {
-    await User.createEach([
-      { username: 'antonio.vargas@walloom.com', password: '1234567890', firstName: 'Admin', lastName: 'Administrator' }
-    ]);
-  }
+  /*********** SERMONS ***********/
 
   var sermons = [
     {
       "fileName": "snippetvideo000.m4v",
-      "date": "2002-05-30T09:00:00",
+      "date": moment().format('MMMM Do YYYY'),
       "title": "Health and Happiness",
       "description": "Of course, everybody wants health and happiness.  In this short snippet, Dr. Peale tells us that the laws of health and happiness are taught better in the church than anywhere else.  And that the true definition of happiness is not pollyannaish sweetness and light, but rather doing the right thing, in the right way and in the right time.",
       "bibleVerse": "",
