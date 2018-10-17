@@ -77,6 +77,40 @@ module.exports = {
       via: "sermon"
     },
 
+    viewed: {
+      collection: "viewed",
+      via: "sermon"
+    },
+
+    tagVotes: {
+      collection: "tagVote",
+      via: "sermon"
+    },
+
+  },
+
+  fillList: async (sermons) => {
+    sermons.forEach(element => {
+      Sermon.findOrCreate({ fileName: element.fileName }, {
+        fileName: element.fileName,
+        date: element.date,
+        title: element.title,
+        description: element.description,
+        bibleVerse: element.bibleVerse,
+        bibleVerseText: element.bibleVerseText,
+        type: element.type,
+        duration: element.duration,
+        package: element.package
+      })
+      .exec(async (err, sermon, wasCreated) => {
+        if (err) { return err }
+        if (wasCreated) { 
+          sails.log.info(`Created a new sermon: ${sermon.fileName}`)
+        } else {
+          sails.log.warn(`Found existing sermon: ${sermon.fileName}`)
+        }
+      })
+    });
   },
 
 };

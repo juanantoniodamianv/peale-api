@@ -53,10 +53,13 @@ module.exports = {
       via: "user"
     },
 
-    /*played: {},
+    viewedSermons: {
+      collection: "viewed",
+      via: "user"
+    },
 
-    tags: {}
-    */
+    // tags: {}
+
   },
 
   customToJSON: function() {
