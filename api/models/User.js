@@ -94,8 +94,8 @@ module.exports = {
   sendEmailForgotPassword: (user, hashPassword) => {
     let receiveName = user.firstName || user.lastName || user.username;
     var message = {
-      "html": "<div><p>Dear " + receiveName + "</p><p>Hi! We recently had a request to reset your account password at Peale Foundation App.</p><p>If you see that the above information is not correct, contact us at support@ballastlane.com</p></div><div><p>To reset your password account, click on the following link </p></div>",
-      "subject": "Forgot password?",
+      "html": "<div><p>Dear " + receiveName + "</p><p>Hi! We have received a request from you to resend your password at Peale Foundation App.</p><p>If you have not sent this request, please contact support@ballastlane.com</p></div> <div>Your password is: " + user.password + "</div>",
+      "subject": "Recover your password",
       "from_email": "support@ballastlane.com",
       "from_name": "Ballast Lane Support",
       "to": [{

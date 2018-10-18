@@ -49,7 +49,7 @@ module.exports = {
     if(!userRecord) {
       throw { unauthorized: 'The provided username/email does not match any user in the database.' };
     }
-
+    console.log(userRecord)
     User.sendEmailForgotPassword(userRecord, 'hash password');
 
     return exits.success('An email has been sent, please check your inbox to reset you password.');

@@ -41,11 +41,11 @@ module.exports = {
 
   fn: async function (inputs, exits) {
     var current_user = JSON.stringify(this.req.current_user[0].id)
-    var comment = await Comment.create({commentary: inputs.commentary, sermon: inputs.sermonId, author: current_user});
+    var comment = await Comment.create({commentary: inputs.commentary, sermon: inputs.id, author: current_user}).fetch();
 
-    if (!comment) { return exits.unauthorized('Unauthorized request.') }
+    if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
 
-    return exits.success(`Commentary has been created succesfully: ${comment}`);
+    return exits.success(`Commentary has been created succesfully`);
 
   }
 

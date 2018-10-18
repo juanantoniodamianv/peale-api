@@ -31,7 +31,7 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-    var comments = await Comment.find({sermon: inputs.id});
+    var comments = await Comment.find({sermon: inputs.id}).populate("author");
 
     if (!comments) { return exits.unauthorized('Unauthorized request.') }
 
