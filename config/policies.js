@@ -24,4 +24,11 @@ module.exports.policies = {
 
   'v1/sermon/*': true,
 
+  'v1/tag/*': true,
+
+  'v1/comment/index': true,
+
+  //'v1/comment/edit': ['isAuthorized', 'isCurrentUser'],
+  //'v1/comment/delete': ['isAuthorized', 'isCurrentUser'],
+
 };

@@ -58,6 +58,11 @@ module.exports = {
       via: "user"
     },
 
+    comment: {
+      collection: "comment",
+      via: "author"
+    },
+
     // tags: {}
 
   },

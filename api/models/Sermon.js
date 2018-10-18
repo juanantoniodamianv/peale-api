@@ -87,6 +87,11 @@ module.exports = {
       via: "sermon"
     },
 
+    comment: {
+      collection: "comment",
+      via: "sermon"
+    },
+
   },
 
   fillList: async (sermons) => {
