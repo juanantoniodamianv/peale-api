@@ -4,7 +4,7 @@
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
-var bcrypt = require("bcrypt");
+//var bcrypt = require("bcrypt");
 var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill(process.env.API_KEY_MANDRILL);
 
@@ -71,7 +71,7 @@ module.exports = {
     return _.omit(this, 'password');
   },
 
-  beforeCreate: async (values, cb) => {
+  /* beforeCreate: async (values, cb) => {
     bcrypt.hash(values.password, 10, function (err, hash) {
       if (err) return cb(err);
       values.password = hash;
@@ -89,7 +89,7 @@ module.exports = {
     } else {
       cb();
     }
-  },
+  }, */
 
   sendEmailForgotPassword: (user, hashPassword) => {
     let receiveName = user.firstName || user.lastName || user.username;

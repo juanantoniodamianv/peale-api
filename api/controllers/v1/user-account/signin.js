@@ -1,4 +1,4 @@
-var bcrypt = require("bcrypt");
+//var bcrypt = require("bcrypt");
 
 module.exports = {
 
@@ -87,9 +87,13 @@ and exposed as \`req.me\`.)`
     }
 
     // If the password doesn't match, then also exit thru "badCombo".
-    const match = await bcrypt.compare(inputs.password, userRecord.password);
+    /* const match = await bcrypt.compare(inputs.password, userRecord.password);
  
     if (!match) {
+      throw { incorrectPassword: 'Credentials are incorrect.' };
+    } */
+
+    if (inputs.password !== userRecord.password) {
       throw { incorrectPassword: 'Credentials are incorrect.' };
     }
 

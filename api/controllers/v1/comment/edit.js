@@ -12,14 +12,14 @@ module.exports = {
     id: {
       type: "number",
       required: true,
-      example: "1",
+      example: 1,
       description: "Sermon ID"
     },
 
     commentId: {
       type: "number",
       required: true,
-      example: "1",
+      example: 1,
       description: "Commentary ID"
     },
 

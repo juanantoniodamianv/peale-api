@@ -8,7 +8,6 @@
     "@sailshq/lodash": "^3.10.3",
     "async": "2.0.1",
     "aws-sdk": "^2.327.0",
-    "bcrypt": "^3.0.1",
     "dotenv": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
     "mandrill-api": "^1.0.45",
