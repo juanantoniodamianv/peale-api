@@ -98,16 +98,22 @@ the account verification message.)`,
       firstName: inputs.firstName,
       lastName: inputs.lastName,
     }))
-    .intercept('E_UNIQUE', 'emailAlreadyInUse')
+    .intercept('E_UNIQUE', () => { return exits.emailAlreadyInUse('There is already an account using that email address!'); })
     .intercept({name: 'UsageError'}, 'invalid')
     .fetch();
 
-    sails.log.info(newUserRecord);
+    let newToken = await sails.helpers.jwt.generate(newUserRecord.id);
+
+    var responseData = {
+      user: newUserRecord,
+      token: newToken
+    }
+
     // Store the user's new id in their session.
     this.req.session.userId = newUserRecord.id;
 
     // Since everything went ok, send our 200 response.
-    return exits.success();
+    return exits.success(responseData);
 
   }
 
