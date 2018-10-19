@@ -3,9 +3,9 @@ info:
   title: Peale Foundation API
   description: Peale Foundation APIs descriptions
   version: "1.0.0"
-host: localhost:1337
+host: nvp-api-dev.ballastlane.com
 schemes:
-  - http
+  - https
 basePath: /v1
 produces:
   - application/json
