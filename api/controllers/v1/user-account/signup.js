@@ -98,7 +98,7 @@ the account verification message.)`,
       firstName: inputs.firstName,
       lastName: inputs.lastName,
     }))
-    .intercept('E_UNIQUE', () => { return exits.emailAlreadyInUse('There is already an account using that email address!'); })
+    .intercept('E_UNIQUE', () => { return exits.emailAlreadyInUse({message: 'There is already an account using that email address!'}); })
     .intercept({name: 'UsageError'}, 'invalid')
     .fetch();
 

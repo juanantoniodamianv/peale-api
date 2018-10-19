@@ -88,6 +88,8 @@ paths:
     get:
       summary: List of all sermons.
       description: Retrieve all sermons data.
+      tags:
+      - Sermons
       responses:
         200:
           description: Succesfully retrieved all sermons.
@@ -101,11 +103,13 @@ paths:
       summary: Show one sermon.
       description: Retrieve one sermon data.
       parameters:
-        - in: path
-          name: id
-          description: The sermon id.
-          type: string
-          required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      tags:
+      - Sermons
       responses:
         200:
           description: Succesfully retrieved sermon.
@@ -119,13 +123,13 @@ paths:
       summary: List of all sermons with personalized data User.
       description: Retrieve all sermons data.
       parameters:
-        - in: header
-          name: token
-          description: Authorization token.
-          type: string
-          required: true
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
       tags:
-      - Session
+      - Sermons
       responses:
         200:
           description: Succesfully retrieved all sermons.
@@ -139,18 +143,18 @@ paths:
       summary: Show one sermon with personalized data User.
       description: Retrieve one sermon data.
       parameters:
-        - in: header
-          name: token
-          description: Authorization token.
-          type: string
-          required: true
-        - in: path
-          name: id
-          description: The sermon id.
-          type: string
-          required: true
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
       tags:
-      - Session
+      - Sermons
       responses:
         200:
           description: Succesfully retrieved sermon.
@@ -159,10 +163,159 @@ paths:
           schema:
             $ref: '#/definitions/Error'
 
+  /tags:
+    get:
+      summary: Show all tags availables
+      description: Retrieve tags data
+      tags:
+      - Tags
+      responses:
+        200: 
+          description: Succesfully retrieved all tags.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
+  /tags/{id}:
+    get:
+      summary: Show one tag
+      description: Retrieve one tag data
+      parameters:
+      - in: path
+        name: id
+        description: The tag id.
+        type: string
+        required: true
+      tags:
+      - Tags
+      responses:
+        200: 
+          description: Succesfully retrieved tag.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
+  /sermons/{id}/comments:
+    get:
+      summary: Show all comments by sermon
+      description: Retrieve all comments by sermon id.
+      tags:
+      - Comments
+      responses:
+        200:
+          description: Succesfully retrieved comments
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+    post:
+      summary: Create comment for the sermon
+      description: Create comment for the sermon.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      - in: body
+        name: commentary
+        description: The commentary for the sermon
+        required: true
+        schema:
+          $ref: '#/definitions/Comment'
+      tags:
+      - Comments
+      responses:
+        200:
+          description: Comment created succesfully
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+  
+  /sermons/{id}/comments/{commentId}:
+    put:
+      summary: Update comment for the sermon
+      description: Update comment for the sermon.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      - in: path
+        name: commentId
+        description: The comment id.
+        type: string
+        required: true
+      - in: body
+        name: commentary
+        description: The commentary for the sermon
+        required: true
+        schema:
+          $ref: '#/definitions/Comment'
+      tags:
+      - Comments
+      responses:
+        200:
+          description: Comment updated succesfully
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+    
+    delete:
+      summary: Delete comment for the sermon
+      description: Delete comment for the sermon.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      - in: path
+        name: commentId
+        description: The comment id.
+        type: string
+        required: true
+      tags:
+      - Comments
+      responses:
+        200:
+          description: Comment destroyed succesfully
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
 
 
 
 definitions:
+  Comment:
+    type: object
+    properties:
+      commentary:
+        type: string
+        description: Commentary
+
   UserCredentials:
     type: object
     properties:

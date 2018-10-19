@@ -52,7 +52,11 @@ module.exports = {
     console.log(userRecord)
     User.sendEmailForgotPassword(userRecord, 'hash password');
 
-    return exits.success('An email has been sent, please check your inbox to reset you password.');
+    var responseData = {
+      message: 'An email has been sent, please check your inbox to reset you password.'
+    }
+
+    return exits.success(responseData);
 
   }
 

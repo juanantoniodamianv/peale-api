@@ -55,10 +55,10 @@ module.exports.routes = {
 
   /* Create/Delete/Edit/Index Comments */
   'POST /v1/sermons/:id/comments':              { action: 'v1/comment/create' },
+  'GET /v1/sermons/:id/comments':               { action: 'v1/comment/index' },
   'PUT /v1/sermons/:id/comments/:commentId':    { action: 'v1/comment/edit' },
   'DELETE /v1/sermons/:id/comments/:commentId': { action: 'v1/comment/delete' },
-
-  'GET /v1/sermons/:id/comments': { action: 'v1/comment/index' },
+  
 
 
 
