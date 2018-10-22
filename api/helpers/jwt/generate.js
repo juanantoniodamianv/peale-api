@@ -25,9 +25,10 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-    var token = await jwt.sign({uid: inputs.payload}, jwtSecret, {expiresIn: 180 * 60})
-    sails.log.info(`Token: ${token}`);
-    return exits.success(token);
+    var token = await jwt.sign({uid: inputs.payload}, jwtSecret, {expiresIn: '24h'})
+    var refreshToken = await jwt.sign({uid: inputs.payload}, jwtSecret)
+    
+    return exits.success({token, refreshToken});
   }
 
 

@@ -106,7 +106,8 @@ the account verification message.)`,
 
     var responseData = {
       user: newUserRecord,
-      token: newToken
+      token: newToken.token,
+      refreshToken: newToken.refreshToken
     }
 
     // Store the user's new id in their session.

@@ -84,6 +84,29 @@ paths:
           schema:
             $ref: '#/definitions/Error'
 
+
+  /refresh-token:
+    post:
+      summary: Refresh Token
+      description:  Verify token is valid and if it expired, sign new token(with old tokens payload) and response it.
+      parameters:
+      - in: header
+        name: token
+        description: Refresh token.
+        type: string
+        required: true
+      tags:
+      - Session
+      responses:
+        201:
+          description: Token and refresh token are generated successfully.
+          schema:
+            $ref: '#/definitions/SessionNew'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
   /sermons:
     get:
       summary: List of all sermons.
@@ -311,6 +334,11 @@ paths:
 
 
 definitions:
+  RefreshToken:
+    type: object
+    properties:
+
+
   Comment:
     type: object
     properties:

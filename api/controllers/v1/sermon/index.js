@@ -33,6 +33,9 @@ module.exports = {
 
     await Promise.all(sermons.map(async (sermon) => {
       var mediaFileURL = await sails.helpers.aws.s3.get.with({fileName: sermon.fileName});
+      sermon.played = false;
+      sermon.isFavorite = false;
+      sermon.comments = 0;
       sermon.media = {
         "url": mediaFileURL,
         "type": sermon.type,

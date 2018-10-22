@@ -101,7 +101,8 @@ and exposed as \`req.me\`.)`
 
     var responseData = {
       user: userRecord,
-      token: newToken
+      token: newToken.token,
+      refreshToken: newToken.refreshToken
     }
     // Modify the active session instance.
     this.req.session.userId = userRecord.id;

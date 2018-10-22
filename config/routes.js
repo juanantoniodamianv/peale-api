@@ -30,6 +30,8 @@ module.exports.routes = {
   'PUT /v1/signin':           { action: 'v1/user-account/signin' },
   'POST /v1/forgot-password': { action: 'v1/user-account/forgot-password' },
 
+  'POST /v1/refresh-token':   { action: 'v1/user-account/refresh-token' },
+
   /* Sermons: List and Detail (WITHOUT LOGIN) */
 
   'GET /v1/sermons':      { action: 'v1/sermon/index' },
