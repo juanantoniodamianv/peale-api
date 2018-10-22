@@ -78,7 +78,7 @@ paths:
       - Session
       responses:
         201:
-          description: An email has been sent, please check your inbox to reset you password.
+          description: An email has been sent, please check your inbox.
         default:
           description: Unexpected error
           schema:
@@ -305,6 +305,8 @@ paths:
           schema:
             $ref: '#definitions/Error'
 
+  
+
 
 
 
@@ -349,9 +351,16 @@ definitions:
   SessionNew:
     type: object
     properties:
-      accessToken:
+      user:
+        type: object
+        description: User object
+      token:
         type: string
-        description: User's session token
+        description: User session token
+        format: jwt
+      refreshToken:
+        type: string
+        description: User refresh token
         format: jwt
 
   Error:

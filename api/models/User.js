@@ -40,14 +40,6 @@ module.exports = {
       minLength: 2
     },
 
-    passwordResetToken: {
-      type: "string",
-    },
-
-    passwordResetTokenExpiresAt: {
-      type: "number"
-    },
-
     favorites: {
       collection: "favorite",
       via: "user"
@@ -62,8 +54,6 @@ module.exports = {
       collection: "comment",
       via: "author"
     },
-
-    // tags: {}
 
   },
 

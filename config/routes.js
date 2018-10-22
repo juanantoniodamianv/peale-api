@@ -46,12 +46,12 @@ module.exports.routes = {
   'GET /v1/sermons-me/:id': { action: 'v1/sermon-me/show' },
 
   /* Add/Remove Sermon to my favorites */
-  'POST /v1/sermons-me/:id/add-favorite':       { action: 'v1/sermon-me/favorite/add-favorite' },
-  'DELETE /v1/sermons-me/:id/remove-favorite':  { action: 'v1/sermon-me/favorite/remove-favorite' },
+  'POST /v1/sermons-me/:id':    { action: 'v1/sermon-me/favorite/add-favorite' },
+  'DELETE /v1/sermons-me/:id':  { action: 'v1/sermon-me/favorite/remove-favorite' },
 
   /* Add/Remove Sermon to my viewed list */
-  'POST /v1/sermons-me/:id/add-viewed':       { action: 'v1/sermon-me/viewed/add-viewed' },
-  'DELETE /v1/sermons-me/:id/remove-viewed':  { action: 'v1/sermon-me/viewed/remove-viewed' },
+  'POST /v1/sermons-me/:id':    { action: 'v1/sermon-me/viewed/add-viewed' },
+  'DELETE /v1/sermons-me/:id':  { action: 'v1/sermon-me/viewed/remove-viewed' },
 
   /* Create/Delete/Edit/Index Comments */
   'POST /v1/sermons/:id/comments':              { action: 'v1/comment/create' },
