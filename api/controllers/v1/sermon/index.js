@@ -31,14 +31,16 @@ module.exports = {
 
     if (!sermons) throw { unauthorized: 'Unauthorized request.' };
 
-    sermons.forEach(sermon => {
+    await Promise.all(sermons.map(async (sermon) => {
+      var mediaFileURL = await sails.helpers.aws.s3.get.with({fileName: sermon.fileName});
       sermon.media = {
+        "url": mediaFileURL,
         "type": sermon.type,
         "duration": sermon.duration
-      }
+      };
       delete sermon.type
       delete sermon.duration
-    }); 
+    }));
 
     var responseData = { sermons }
 
