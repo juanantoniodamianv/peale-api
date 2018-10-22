@@ -45,7 +45,11 @@ module.exports = {
 
     if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
 
-    return exits.success(`Commentary has been created succesfully`);
+    var responseData = {
+      comment
+    }
+
+    return exits.success(responseData);
 
   }
 

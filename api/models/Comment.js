@@ -36,5 +36,10 @@ module.exports = {
 
   },
 
+  totalCount: async (sermonId) => {
+    var totalCount = await Comment.count({sermon: sermonId});
+    return +totalCount;
+  },
+
 };
 

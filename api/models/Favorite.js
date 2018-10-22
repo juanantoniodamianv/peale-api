@@ -32,5 +32,15 @@ module.exports = {
 
   },
 
+  isFavorite: async (current_user, sermonId) => {
+    var isFavorite = await Favorite.findOne({user: current_user, sermon: sermonId});
+    
+    if (isFavorite !== undefined){
+      return true
+    } else {
+      return false
+    }
+  },
+
 };
 

@@ -258,6 +258,8 @@ paths:
       responses:
         200:
           description: Comment created succesfully
+          schema: 
+            $ref: '#definitions/CommentPost'
         default:
           description: Unexpected error
           schema:
@@ -294,6 +296,8 @@ paths:
       responses:
         200:
           description: Comment updated succesfully
+          schema:
+            $ref: '#definitions/CommentPost'
         default:
           description: Unexpected error
           schema:
@@ -334,10 +338,6 @@ paths:
 
 
 definitions:
-  RefreshToken:
-    type: object
-    properties:
-
 
   Comment:
     type: object
@@ -345,6 +345,16 @@ definitions:
       commentary:
         type: string
         description: Commentary
+  
+  CommentPost:
+    type: object
+    properties:
+      comment:
+        type: object
+        description: Comment object
+      user:
+        type: object
+        description: Comment's author
 
   UserCredentials:
     type: object
