@@ -48,7 +48,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
     //var current_user = JSON.stringify(this.req.current_user[0].id)
-    var comment = await Comment.update({id: inputs.commentId}).set({commentary: inputs.commentary});
+    var comment = await Comment.update({id: inputs.commentId}).set({commentary: inputs.commentary}).fetch();
 
     if (!comment) { return exits.unauthorized('Unauthorized request.') }
 
