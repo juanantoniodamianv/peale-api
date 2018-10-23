@@ -20,16 +20,11 @@ module.exports.policies = {
   '*': ['isAuthorized'],
 
   'v1/user-account/*': true,
-  //'v1/user-account/update-account': 'isAuthorized',
+
   'v1/user-account/refresh-token': ['refreshToken'],
-
-  'v1/sermon/*': true,
-
-  'v1/tag/*': true,
 
   'v1/comment/index': true,
 
-  //'v1/comment/edit': ['isAuthorized', 'isCurrentUser'],
-  //'v1/comment/delete': ['isAuthorized', 'isCurrentUser'],
+  'v1/sermon/index': ['tokenExist'],
 
 };

@@ -32,5 +32,15 @@ module.exports = {
 
   },
 
+  isViewed: async (current_user, sermonId) => {
+    var isViewed = await Viewed.findOne({user: current_user, sermon: sermonId});
+    
+    if (isViewed !== undefined){
+      return true
+    } else {
+      return false
+    }
+  },
+
 };
 

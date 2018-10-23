@@ -35,7 +35,11 @@ module.exports = {
 
     if (!comments) { return exits.unauthorized('Unauthorized request.') }
 
-    return exits.success(comments);
+    var responseData = {
+      comments
+    }
+
+    return exits.success(responseData);
 
   }
 

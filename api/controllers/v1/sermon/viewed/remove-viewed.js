@@ -19,12 +19,12 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully added this sermon to my favorites.',
+      description: 'Succesfully added this sermon to my viewed list.',
     },
 
     alreadyCreate: {
       statusCode: 201,
-      description: 'This sermon is already added to my favorites.'
+      description: 'This sermon is already added to my viewed list.'
     },
     
     unauthorized: {

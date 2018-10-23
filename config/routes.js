@@ -32,7 +32,7 @@ module.exports.routes = {
 
   'POST /v1/refresh-token':   { action: 'v1/user-account/refresh-token' },
 
-  /* Sermons: List and Detail (WITHOUT LOGIN) */
+  /* Sermons: List and Detail (WITHOUT LOGIN) || (WITH LOGIN: played, favorite) */
 
   'GET /v1/sermons':      { action: 'v1/sermon/index' },
   'GET /v1/sermons/:id':  { action: 'v1/sermon/show' },
@@ -40,21 +40,19 @@ module.exports.routes = {
   /* Tag */
   'GET /v1/tags':     { action: 'v1/tag/index' },
   'GET /v1/tags/:id': { action: 'v1/tag/show' },
+  'POST /v1/sermons/:id/vote': { action: 'v1/tag/vote' },
+
 
   /********** USER LOGIN IS REQUIRED: **********/
 
-  /* Sermons: List and Detail (WITH LOGIN) */
-  'GET /v1/sermons-me':     { action: 'v1/sermon-me/index' },
-  'GET /v1/sermons-me/:id': { action: 'v1/sermon-me/show' },
-
   /* Add/Remove Sermon to my favorites */
-  'POST /v1/sermons-me/:id/favorite':    { action: 'v1/sermon-me/favorite/add-favorite' },
-  'DELETE /v1/sermons-me/:id/favorite':  { action: 'v1/sermon-me/favorite/remove-favorite' },
-  'GET /v1/sermons-me/favorite':  { action: 'v1/sermon-me/favorite/index' },
+  'POST /v1/sermons/:id/favorite':    { action: 'v1/sermon/favorite/add-favorite' },
+  'DELETE /v1/sermons/:id/favorite':  { action: 'v1/sermon/favorite/remove-favorite' },
+  'GET /v1/sermons/favorite':  { action: 'v1/sermon/favorite/index' },
 
   /* Add/Remove Sermon to my viewed list */
-  'POST /v1/sermons-me/:id':    { action: 'v1/sermon-me/viewed/add-viewed' },
-  'DELETE /v1/sermons-me/:id':  { action: 'v1/sermon-me/viewed/remove-viewed' },
+  'POST /v1/sermons/:id/viewed':    { action: 'v1/sermon/viewed/add-viewed' },
+  'DELETE /v1/sermons/:id/viewed':  { action: 'v1/sermon/viewed/remove-viewed' },
 
   /* Create/Delete/Edit/Index Comments */
   'POST /v1/sermons/:id/comments':              { action: 'v1/comment/create' },
