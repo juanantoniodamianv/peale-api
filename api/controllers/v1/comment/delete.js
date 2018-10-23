@@ -31,7 +31,7 @@ module.exports = {
       statusCode: 200,
       description: 'Commentary has been deleted succesfully.',
     },
-    
+
     unauthorized: {
       statusCode: 404,
       description: 'Unauthorized request.',
@@ -41,7 +41,13 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    var comment = await Comment.destroy({id: inputs.commentId}).fetch();
+    var current_user = JSON.stringify(this.req.current_user[0].id);
+
+    var commentUserId = await Comment.findOne({ id: inputs.commentId });
+
+    if (current_user != commentUserId.author) { return exits.unauthorized('Unauthorized request.') }
+
+    var comment = await Comment.destroy({ id: inputs.commentId }).fetch();
 
     if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
 

@@ -38,7 +38,7 @@ module.exports = {
       statusCode: 200,
       description: 'Commentary has been updated succesfully.',
     },
-    
+
     unauthorized: {
       statusCode: 404,
       description: 'Unauthorized request.',
@@ -47,13 +47,18 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-    //var current_user = JSON.stringify(this.req.current_user[0].id)
-    var comment = await Comment.update({id: inputs.commentId}).set({commentary: inputs.commentary}).fetch();
+
+    var current_user = JSON.stringify(this.req.current_user[0].id)
+
+    var commentUserId = await Comment.findOne({ id: inputs.commentId });
+
+    if (current_user != commentUserId.author) { return exits.unauthorized('Unauthorized request.') }
+
+    var comment = await Comment.update({ id: inputs.commentId }).set({ commentary: inputs.commentary }).fetch();
 
     if (!comment) { return exits.unauthorized('Unauthorized request.') }
 
     return exits.success(`Commentary has been updated succesfully: ${comment}`);
-
   }
 
 
