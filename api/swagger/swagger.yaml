@@ -111,11 +111,19 @@ paths:
     get:
       summary: List of all sermons.
       description: Retrieve all sermons data.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: false
       tags:
       - Sermons
       responses:
         200:
           description: Succesfully retrieved all sermons.
+          schema:
+            $ref: '#/definitions/Sermons'
         default:
           description: Unexpected error
           schema:
@@ -136,55 +144,13 @@ paths:
       responses:
         200:
           description: Succesfully retrieved sermon.
+          schema:
+            $ref: '#/definitions/Sermon'
         default:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
 
-  /sermons-me:
-    get:
-      summary: List of all sermons with personalized data User.
-      description: Retrieve all sermons data.
-      parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
-      tags:
-      - Sermons
-      responses:
-        200:
-          description: Succesfully retrieved all sermons.
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-
-  /sermons-me/{id}:
-    get:
-      summary: Show one sermon with personalized data User.
-      description: Retrieve one sermon data.
-      parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
-      - in: path
-        name: id
-        description: The sermon id.
-        type: string
-        required: true
-      tags:
-      - Sermons
-      responses:
-        200:
-          description: Succesfully retrieved sermon.
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
 
   /tags:
     get:
@@ -219,6 +185,37 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#definitions/Error'
+
+  /sermons/{id}/vote:
+    post:
+      summary: Vote for tags
+      description: Vote for one or three tags per sermon
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: Sermon ID
+        type: string
+        required: true
+      - in: body
+        name: tag
+        description: Array of Tag ID's
+        type: array
+        required: true
+      tags:
+      - Tags
+      responses:
+        200: 
+          description: Succesfully voted tags.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
 
   /sermons/{id}/comments:
     get:
@@ -338,6 +335,20 @@ paths:
 
 
 definitions:
+
+  Sermons:
+    type: array
+    properties:
+      sermons:
+        type: object
+        description: Sermons object
+
+  Sermon:
+    type: object
+    properties:
+      sermon:
+        type: object
+        description: Sermons object
 
   Comment:
     type: object
