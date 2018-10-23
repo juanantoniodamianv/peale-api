@@ -1,13 +1,12 @@
 /* const aws = require('aws-sdk');
 const s3 = new aws.S3(); */
 const options =
-      { key: process.env.S3_KEY
-      , secret: process.env.S3_SECRET_KEY
-      , bucket: 'pealefoundation-sermons'
-      }
-      // This will give you an adapter instance configured with the
-      // credentials and bucket defined above
-    , adapter = require('skipper-better-s3')(options)
+{
+  key: process.env.S3_KEY,
+  secret: process.env.S3_SECRET_KEY,
+  bucket: 'pealefoundation-sermons'
+},
+  adapter = require('skipper-better-s3')(options)
 
 module.exports = {
 
@@ -42,9 +41,9 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    const url = adapter.url('getObject', { s3params: { Key: inputs.fileName } })
+    const url = adapter.url('getObject', { s3params: { Key: inputs.fileName, Expires: 31536000 } })
     return exits.success(url);
-    
+
   }
 
 
