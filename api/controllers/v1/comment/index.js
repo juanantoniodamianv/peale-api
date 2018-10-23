@@ -14,6 +14,21 @@ module.exports = {
       example: 1,
       description: "Sermon ID"
     },
+    
+    limit: {
+      type: "number",
+      example: 1,
+      description: "Limit of records",
+      defaultsTo: 30
+    },
+
+    skip: {
+      type: "number",
+      example: 1,
+      description: "Skip of records",
+      defaultsTo: 0
+    },
+
   },
 
 
@@ -31,17 +46,19 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-    var comments = await Comment.find({sermon: inputs.id}).populate("author");
+    var count = await Comment.totalCount(inputs.id);
+
+    var comments = await Comment.get(inputs);
 
     if (!comments) { return exits.unauthorized('Unauthorized request.') }
 
     var responseData = {
-      comments
+      comments,
+      skip: inputs.skip,
+      limit: inputs.limit,
+      count: count || 0
     }
-
     return exits.success(responseData);
-
   }
-
 
 };

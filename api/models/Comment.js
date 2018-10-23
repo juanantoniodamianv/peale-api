@@ -41,5 +41,14 @@ module.exports = {
     return +totalCount;
   },
 
+  get: async (inputs) => {
+    var comments = await Comment.find({where: { sermon: inputs.id }})
+      .limit(inputs.limit)
+      .skip(inputs.skip)
+      .populate("author")
+    
+    return comments;
+  },
+
 };
 
