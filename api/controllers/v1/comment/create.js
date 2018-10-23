@@ -31,7 +31,7 @@ module.exports = {
       statusCode: 200,
       description: 'Commentary has been created succesfully.',
     },
-    
+
     unauthorized: {
       statusCode: 404,
       description: 'Unauthorized request.',
@@ -41,7 +41,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
     var current_user = JSON.stringify(this.req.current_user[0].id)
-    var comment = await Comment.create({commentary: inputs.commentary, sermon: inputs.id, author: current_user}).fetch();
+    var comment = await Comment.create({ commentary: inputs.commentary, sermon: inputs.id, author: current_user }).fetch();
 
     if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
 
