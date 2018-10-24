@@ -41,6 +41,7 @@ module.exports = {
       sermon.played = current_user !== undefined ? await Viewed.isViewed(current_user, sermon.id) || false : false;
       sermon.isFavorite = current_user !== undefined ? await Favorite.isFavorite(current_user, sermon.id) || false : false;
       sermon.comments = await Comment.totalCount(sermon.id) || 0;
+      sermon.tags = await TagVote.get(sermon.id);
       sermon.media = {
         "url": mediaFileURL,
         "type": sermon.type,

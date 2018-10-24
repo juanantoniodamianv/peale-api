@@ -59,5 +59,22 @@ module.exports = {
     }
   },
 
+  /* Get last three with highest vote */
+  get: async (sermonId) => {  
+    var tags = await TagVote.find({where: {sermon: sermonId}, select: ['id']})
+      .sort('vote DESC')
+      .limit(3)
+      .populate('tag');
+    
+    tags.forEach(element => {
+      element.id = element.tag.id
+      delete element.id
+      element.name = element.tag.name
+      delete element.tag
+    })
+
+    return tags;
+  },
+
 };
 
