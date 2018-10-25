@@ -150,6 +150,26 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
+  
+  /sermons/{id}/increment-view:
+    put:
+      summary: Increment view value for one sermon.
+      description: Increment view value, the default view value per new sermon is zero.
+      parameters:
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      tags:
+      - Sermons
+      responses:
+        200:
+          description: Succesfully increment view.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
 
 
   /tags:

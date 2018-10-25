@@ -27,4 +27,6 @@ module.exports.policies = {
 
   'v1/sermon/index': ['tokenExist'],
 
+  'v1/sermon/increment-view': true,
+
 };
