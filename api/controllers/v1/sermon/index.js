@@ -15,11 +15,11 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved all sermons.',
+      description: 'All sermons retrieved successfully.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -35,9 +35,9 @@ module.exports = {
     var sermons = await Sermon.find({});
 
     if (!sermons) throw { unauthorized: 'Unauthorized request.' };
-    
+
     await Promise.all(sermons.map(async (sermon) => {
-      var mediaFileURL = await sails.helpers.aws.s3.get.with({fileName: sermon.fileName});
+      var mediaFileURL = await sails.helpers.aws.s3.get.with({ fileName: sermon.fileName });
       sermon.played = current_user !== undefined ? await Viewed.isViewed(current_user, sermon.id) || false : false;
       sermon.isFavorite = current_user !== undefined ? await Favorite.isFavorite(current_user, sermon.id) || false : false;
       sermon.comments = await Comment.totalCount(sermon.id) || 0;

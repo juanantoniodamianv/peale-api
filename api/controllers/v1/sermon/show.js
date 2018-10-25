@@ -19,38 +19,39 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved this sermon.',
+      description: 'Sermon retrieved successfully.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved this sermon.',
+      description: 'Sermon retrieved successfully.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
-    }, },
+    },
+  },
 
 
   fn: async function (inputs, exits) {
 
-    var sermon = await Sermon.findOne({id: inputs.id});
+    var sermon = await Sermon.findOne({ id: inputs.id });
 
     if (!sermon) throw { unauthorized: 'Unauthorized request.' };
 
     console.log(sermon.fileName)
-    var mediaFileURL = await sails.helpers.aws.s3.get.with({fileName: sermon.fileName});
+    var mediaFileURL = await sails.helpers.aws.s3.get.with({ fileName: sermon.fileName });
     console.log(mediaFileURL)
-    sermon.media = { 
-                    "url": mediaFileURL,
-                    "type": sermon.type,
-                    "duration": sermon.duration,
-                  };
+    sermon.media = {
+      "url": mediaFileURL,
+      "type": sermon.type,
+      "duration": sermon.duration,
+    };
     delete sermon.type;
     delete sermon.duration;
 

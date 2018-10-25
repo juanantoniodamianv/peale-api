@@ -35,12 +35,12 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode: 200,
-      description: 'Commentary has been updated succesfully.',
+      statusCode: 204,
+      description: 'Commentary has been updated successfully.',
     },
 
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -58,7 +58,7 @@ module.exports = {
 
     if (!comment) { return exits.unauthorized('Unauthorized request.') }
 
-    return exits.success(`Commentary has been updated succesfully: ${comment}`);
+    return exits.success(`Commentary has been updated successfully: ${comment}`);
   }
 
 

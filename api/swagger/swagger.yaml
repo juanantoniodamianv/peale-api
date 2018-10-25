@@ -56,7 +56,7 @@ paths:
       - Session
       responses:
         201:
-          description: Account created succesfully.
+          description: Account created successfully.
           schema:
             $ref: '#/definitions/SessionNew'
         default:
@@ -121,7 +121,7 @@ paths:
       - Sermons
       responses:
         200:
-          description: Succesfully retrieved all sermons.
+          description: successfully retrieved all sermons.
           schema:
             $ref: '#/definitions/Sermons'
         default:
@@ -143,7 +143,7 @@ paths:
       - Sermons
       responses:
         200:
-          description: Succesfully retrieved sermon.
+          description: successfully retrieved sermon.
           schema:
             $ref: '#/definitions/Sermon'
         default:
@@ -165,7 +165,7 @@ paths:
       - Sermons
       responses:
         200:
-          description: Succesfully increment view.
+          description: successfully increment view.
         default:
           description: Unexpected error
           schema:
@@ -180,7 +180,7 @@ paths:
       - Tags
       responses:
         200: 
-          description: Succesfully retrieved all tags.
+          description: successfully retrieved all tags.
         default:
           description: Unexpected error
           schema:
@@ -200,7 +200,7 @@ paths:
       - Tags
       responses:
         200: 
-          description: Succesfully retrieved tag.
+          description: successfully retrieved tag.
         default:
           description: Unexpected error
           schema:
@@ -230,7 +230,7 @@ paths:
       - Tags
       responses:
         200: 
-          description: Succesfully voted tags.
+          description: successfully voted tags.
         default:
           description: Unexpected error
           schema:
@@ -245,7 +245,7 @@ paths:
       - Comments
       responses:
         200:
-          description: Succesfully retrieved comments
+          description: successfully retrieved comments
         default:
           description: Unexpected error
           schema:
@@ -274,7 +274,7 @@ paths:
       - Comments
       responses:
         200:
-          description: Comment created succesfully
+          description: Comment created successfully
           schema: 
             $ref: '#definitions/CommentPost'
         default:
@@ -312,7 +312,7 @@ paths:
       - Comments
       responses:
         200:
-          description: Comment updated succesfully
+          description: Comment updated successfully
           schema:
             $ref: '#definitions/CommentPost'
         default:
@@ -343,7 +343,7 @@ paths:
       - Comments
       responses:
         200:
-          description: Comment destroyed succesfully
+          description: Comment destroyed successfully
         default:
           description: Unexpected error
           schema:

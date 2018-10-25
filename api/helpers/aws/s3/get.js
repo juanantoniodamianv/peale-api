@@ -29,7 +29,7 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved object.'
+      description: 'successfully retrieved object.'
     },
 
     unauthorized: {

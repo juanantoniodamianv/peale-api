@@ -8,7 +8,7 @@ module.exports = {
 
 
   inputs: {
-    id:{
+    id: {
       description: 'Sermon ID',
       type: 'string',
       required: true
@@ -19,16 +19,16 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully added this sermon to viewed list.',
+      description: 'Sermon successfully added to the viewed list.',
     },
 
     alreadyCreate: {
       statusCode: 201,
-      description: 'This sermon is already added to my viewed list.'
+      description: 'Sermon already added to the viewed list.'
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -36,17 +36,17 @@ module.exports = {
 
   fn: async function (inputs, exits) {
     var current_user = JSON.stringify(this.req.current_user[0].id)
-    Viewed.findOrCreate({user: current_user, sermon: inputs.id}, {user: current_user, sermon: inputs.id})
+    Viewed.findOrCreate({ user: current_user, sermon: inputs.id }, { user: current_user, sermon: inputs.id })
       .exec(async (err, viewed, wasCreated) => {
         if (err) return exits.unauthorized('Unauthorized request.')
 
         if (wasCreated) {
           return exits.success(viewed);
-        } else {  
-          return exits.alreadyCreate('This sermon is already added to my viewed list.')
+        } else {
+          return exits.alreadyCreate('Sermon already added to the viewed list.')
         }
       }
-    );
+      );
   }
 
 

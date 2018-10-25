@@ -15,11 +15,11 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved all favorites.',
+      description: 'All favorites successfully retrieved.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -28,14 +28,14 @@ module.exports = {
   fn: async function (inputs, exits) {
     var current_user = JSON.stringify(this.req.current_user[0].id)
 
-    var favorites = await Favorite.find({user: current_user})
-                      .populate('user')
-                      .populate('sermon');
-    
+    var favorites = await Favorite.find({ user: current_user })
+      .populate('user')
+      .populate('sermon');
+
     favorites.forEach(favorite => {
       delete favorite.user
     })
-    
+
     var responseData = {
       favorites
     }
