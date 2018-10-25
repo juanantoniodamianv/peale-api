@@ -15,11 +15,11 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved all tags.',
+      description: 'All tags retrieved successfully.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },

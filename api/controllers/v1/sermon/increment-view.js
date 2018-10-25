@@ -19,31 +19,31 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully increment view.',
+      description: 'Number of views successfully incremented.',
     },
 
     notFound: {
-      statusCode: 400,
+      statusCode: 404,
       description: 'Not found sermon.'
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
 
 
   fn: async function (inputs, exits) {
-    var sermon = await Sermon.findOne({id: inputs.id});
+    var sermon = await Sermon.findOne({ id: inputs.id });
 
     if (sermon !== undefined) {
       var Sermonviews = sermon.views;
       Sermonviews++;
-      var sermon = await Sermon.update({id: inputs.id}).set({views: Sermonviews});
-      return exits.success({message: "Succesfully increment view."});
+      var sermon = await Sermon.update({ id: inputs.id }).set({ views: Sermonviews });
+      return exits.success({ message: 'Number of views successfully incremented.' });
     } else {
-      return exits.notFound({message: "Not found sermon."});
+      return exits.notFound({ message: "Sermon not found." });
     }
 
 

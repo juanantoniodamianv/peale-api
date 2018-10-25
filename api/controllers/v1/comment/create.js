@@ -29,11 +29,11 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Commentary has been created succesfully.',
+      description: 'Commentary has been created successfully.',
     },
 
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -48,10 +48,6 @@ module.exports = {
     var responseData = {
       comment
     }
-
     return exits.success(responseData);
-
   }
-
-
 };

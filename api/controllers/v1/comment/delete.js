@@ -28,12 +28,12 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode: 200,
-      description: 'Commentary has been deleted succesfully.',
+      statusCode: 202,
+      description: 'Commentary has been deleted successfully.',
     },
 
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -51,7 +51,7 @@ module.exports = {
 
     if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
 
-    return exits.success(`Commentary has been deleted succesfully: ${comment}`);
+    return exits.success(`Commentary has been deleted successfully: ${comment}`);
 
   }
 

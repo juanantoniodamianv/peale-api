@@ -26,16 +26,16 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully voted tag with this sermon.',
+      description: 'Tag voted successfully.',
     },
 
     notFound: {
       statusCode: 400,
       description: 'Error.'
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -47,19 +47,19 @@ module.exports = {
 
 
     await Promise.all(tagIds.map(async (tagId) => {
-      TagVote.findOrCreate({sermon: inputs.id, tag: tagId}, {vote: 1, sermon: inputs.id, tag: tagId})
+      TagVote.findOrCreate({ sermon: inputs.id, tag: tagId }, { vote: 1, sermon: inputs.id, tag: tagId })
         .exec(async (err, tagVote, wasCreated) => {
 
           if (wasCreated) {
-            console.log(`Succesfully created vote. ${tagVote}`)
+            console.log(`successfully created vote. ${tagVote}`)
           } else if (tagVote !== undefined) {
-            tagVote = await TagVote.update({id: tagVote.id}).set({vote: tagVote.vote + 1}).fetch();
-            console.log(`Succesfully updated vote. ${tagVote}`)
+            tagVote = await TagVote.update({ id: tagVote.id }).set({ vote: tagVote.vote + 1 }).fetch();
+            console.log(`successfully updated vote. ${tagVote}`)
           }
         })
-      })
-    ); 
-    return exits.success({message: "Succesfully voted tags"});
+    })
+    );
+    return exits.success({ message: 'Tag voted successfully.' });
 
 
   }

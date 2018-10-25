@@ -37,16 +37,16 @@ module.exports = {
   },
 
   totalCount: async (sermonId) => {
-    var totalCount = await Comment.count({sermon: sermonId});
+    var totalCount = await Comment.count({ sermon: sermonId });
     return +totalCount;
   },
 
   get: async (inputs) => {
-    var comments = await Comment.find({where: { sermon: inputs.id }})
+    var comments = await Comment.find({ where: { sermon: inputs.id } })
       .limit(inputs.limit)
       .skip(inputs.skip)
       .populate("author")
-    
+
     return comments;
   },
 

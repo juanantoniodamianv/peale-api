@@ -14,7 +14,7 @@ module.exports = {
       example: 1,
       description: "Sermon ID"
     },
-    
+
     limit: {
       type: "number",
       example: 1,
@@ -35,11 +35,11 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Commentary has been updated succesfully.',
+      description: 'Commentary has been updated successfully.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },

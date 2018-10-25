@@ -19,11 +19,11 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Succesfully retrieved tag.',
+      description: 'All tags retrieved successfully.',
     },
-    
+
     unauthorized: {
-      statusCode: 404,
+      statusCode: 401,
       description: 'Unauthorized request.',
     },
   },
@@ -31,7 +31,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    var tag = await Tag.findOne({id: inputs.id});
+    var tag = await Tag.findOne({ id: inputs.id });
 
     if (!tag) throw { unauthorized: 'Unauthorized request.' };
 
