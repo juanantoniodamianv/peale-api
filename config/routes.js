@@ -35,7 +35,7 @@ module.exports.routes = {
   /* Sermons: List and Detail (WITHOUT LOGIN) || (WITH LOGIN: played, favorite) */
 
   'GET /v1/sermons': { action: 'v1/sermon/index' },
-  'GET /v1/sermons/:id': { action: 'v1/sermon/show' },
+  'PUT /v1/sermons/:id': { action: 'v1/sermon/show' },
 
   /* Tag */
   'GET /v1/tags': { action: 'v1/tag/index' },
