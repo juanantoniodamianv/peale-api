@@ -26,17 +26,19 @@ module.exports = {
       minLength: 6,
       required: true,
       columnName: "encryptedPassword",
-      description: 'Securely hashed representation of the user\'s login password.', 
+      description: 'Securely hashed representation of the user\'s login password.',
       example: '2$28a8eabna301089103-13948134nad'
     },
 
     firstName: {
       type: "string",
+      required: true,
       minLength: 2
     },
 
     lastName: {
       type: "string",
+      required: true,
       minLength: 2
     },
 
@@ -57,7 +59,7 @@ module.exports = {
 
   },
 
-  customToJSON: function() {
+  customToJSON: function () {
     return _.omit(this, 'password');
   },
 
@@ -99,13 +101,13 @@ module.exports = {
       ],
     }
     var async = false;
-    mandrill_client.messages.send({"message": message, "async": async}, (result) => {
+    mandrill_client.messages.send({ "message": message, "async": async }, (result) => {
       console.log(result);
     }, (e) => {
       console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
     });
 
   },
-  
+
 };
 

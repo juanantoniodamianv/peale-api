@@ -44,9 +44,11 @@ module.exports = {
 
     if (!sermon) throw { unauthorized: 'Unauthorized request.' };
 
-    console.log(sermon.fileName)
+    var Sermonviews = sermon.views;
+    Sermonviews++;
+    await Sermon.update({ id: inputs.id }).set({ views: Sermonviews });
+
     var mediaFileURL = await sails.helpers.aws.s3.get.with({ fileName: sermon.fileName });
-    console.log(mediaFileURL)
     sermon.media = {
       "url": mediaFileURL,
       "type": sermon.type,
