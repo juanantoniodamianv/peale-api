@@ -38,7 +38,7 @@ module.exports = async function (req, res, next) {
     await sails.helpers.jwt.verify(token, (err, decoded) => {
       if (err) return res.json(401, {error: 'Invalid Token!'});
       req.token = token;
-      User.find({ id: decoded.id}).limit(1).then((user) => {
+      User.find({ id: decoded.uid}).limit(1).then((user) => {
         req.current_user = user;
         next();
       })
