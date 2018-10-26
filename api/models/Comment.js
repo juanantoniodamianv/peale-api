@@ -43,6 +43,7 @@ module.exports = {
 
   get: async (inputs) => {
     var comments = await Comment.find({ where: { sermon: inputs.id } })
+      .sort('createdAt DESC')
       .limit(inputs.limit)
       .skip(inputs.skip)
       .populate("author")
