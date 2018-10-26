@@ -349,6 +349,128 @@ paths:
           schema:
             $ref: '#definitions/Error'
 
+  /sermons/{id}/viewed:
+    post:
+      summary: Add one sermon to my view list.
+      description: Add one sermon to my view list.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      tags:
+      - Played / Unplayed
+      responses:
+        200:
+          description: Succesfully added this sermon to viewed list.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
+    delete:
+      summary: Remove this sermon to viewed list.
+      description: Remove this sermon to viewed list.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      tags:
+      - Played / Unplayed
+      responses:
+        200:
+          description: Succesfully added this sermon to my viewed list.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
+
+  /sermons/{id}/favorite:
+    post:
+      summary: Add one sermon to my favorites list.
+      description: Add one sermon to my favorites list.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      tags:
+      - Favorites
+      responses:
+        200:
+          description: Succesfully added this sermon to favorite list.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
+    delete:
+      summary: Remove this sermon to favorite list.
+      description: Remove this sermon to favorite list.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      - in: path
+        name: id
+        description: The sermon id.
+        type: string
+        required: true
+      tags:
+      - Favorites
+      responses:
+        200:
+          description: Succesfully added this sermon to my favorites list.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+
+  /sermons/favorite:
+    get:
+      summary: retrieve all sermons from my favorite list.
+      description: retrieve all sermons from my favorite list.
+      parameters:
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: true
+      tags:
+      - Favorites
+      responses:
+        200:
+          description: Succesfully retrieved all sermons from my favorite list.
+          schema:
+            $ref: '#definitions/Sermons'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#definitions/Error'
+    
+
   
 
 
