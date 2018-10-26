@@ -50,6 +50,8 @@ module.exports = {
 
     var comments = await Comment.get(inputs);
 
+    comments = comments.reverse();
+
     if (!comments) { return exits.unauthorized('Unauthorized request.') }
 
     var responseData = {
