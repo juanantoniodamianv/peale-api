@@ -62,12 +62,12 @@ and exposed as \`req.me\`.)`
 
     unauthorized: {
       statusCode: 404,
-      description: 'The username provided are incorrect.',
+      description: 'User not found.',
     },
 
     incorrectPassword: {
-      statusCode: 409,
-      description: 'Credentials are incorrect.'
+      statusCode: 422,
+      description: 'Unprocessable Entity, incorrect credentials.'
     }
 
   },
@@ -83,7 +83,7 @@ and exposed as \`req.me\`.)`
 
     // If there was no matching user, respond thru the "badCombo" exit.
     if (!userRecord) {
-      throw { unauthorized: 'The username provided are incorrect.' };
+      throw { unauthorized: 'The username provided is incorrect.' };
     }
 
     // If the password doesn't match, then also exit thru "badCombo".
