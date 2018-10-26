@@ -8,7 +8,7 @@ module.exports = {
 
 
   extendedDescription:
-`This creates a new user record in the database, signs in the requesting user agent
+    `This creates a new user record in the database, signs in the requesting user agent
 by modifying its [session](https://sailsjs.com/documentation/concepts/sessions), and
 (if emailing with Mailgun is enabled) sends an account verification email.
 
@@ -45,14 +45,16 @@ the account verification message.)`,
       description: 'Password confirm.'
     },
 
-    firstName:  {
+    firstName: {
       type: 'string',
+      required: true,
       example: 'Frida Kahlo de Rivera',
       description: 'The user\'s full name.',
-    }, 
+    },
 
-    lastName:  {
+    lastName: {
       type: 'string',
+      required: true,
       example: 'Frida Kahlo de Rivera',
       description: 'The user\'s full name.',
     }
@@ -65,8 +67,8 @@ the account verification message.)`,
     invalid: {
       responseType: 'badRequest',
       description: 'The provided firstName, lastName, password and/or email address are invalid.',
-      extendedDescription: 'If this request was sent from a graphical user interface, the request '+
-      'parameters should have been validated/coerced _before_ they were sent.'
+      extendedDescription: 'If this request was sent from a graphical user interface, the request ' +
+        'parameters should have been validated/coerced _before_ they were sent.'
     },
 
     emailAlreadyInUse: {
@@ -90,17 +92,20 @@ the account verification message.)`,
       throw { passwordDoNotMatch: 'The provided password do not match.' };
     }
 
+    var userFirstName = inputs.firstName[0].toUpperCase() + inputs.firstName.slice(1);
+    var userLastName = inputs.lastName[0].toUpperCase() + inputs.lastName.slice(1);
+
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
     var newUserRecord = await User.create(Object.assign({
       username: newEmailAddress,
       password: inputs.password,
-      firstName: inputs.firstName,
-      lastName: inputs.lastName,
+      firstName: userFirstName,
+      lastName: userLastName,
     }))
-    .intercept('E_UNIQUE', () => { return exits.emailAlreadyInUse({message: 'There is already an account using that email address!'}); })
-    .intercept({name: 'UsageError'}, 'invalid')
-    .fetch();
+      .intercept('E_UNIQUE', () => { return exits.emailAlreadyInUse({ message: 'There is already an account using that email address!' }); })
+      .intercept({ name: 'UsageError' }, 'invalid')
+      .fetch();
 
     let newToken = await sails.helpers.jwt.generate(newUserRecord.id);
 
