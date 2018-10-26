@@ -30,11 +30,9 @@ module.exports = async function (req, res, next) {
   }
 
   if (token === undefined) {
-    console.log("No hay token")
     req.current_user = undefined;
     next();
   } else {
-    console.log("Si hay token")
     await sails.helpers.jwt.verify(token, (err, decoded) => {
       if (err) return res.json(401, { error: 'Invalid Token!' });
       req.token = token;

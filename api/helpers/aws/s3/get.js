@@ -41,7 +41,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    const url = adapter.url('getObject', { s3params: { Key: inputs.fileName, Expires: 31536000 } })
+    const url = adapter.url('getObject', { s3params: { Key: inputs.fileName, Expires: 157680000 } })
     return exits.success(url);
 
   }
