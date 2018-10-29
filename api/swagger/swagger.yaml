@@ -14,10 +14,6 @@ securityDefinitions:
     type: "apiKey"
     name: "authorization"
     in: "header"
-  accessAdminToken:
-    type: "apiKey"
-    name: "authorization"
-    in: "header"
 paths:
   /signin:
     put:
@@ -89,12 +85,8 @@ paths:
     post:
       summary: Refresh Token
       description:  Verify token is valid and if it expired, sign new token(with old tokens payload) and response it.
-      parameters:
-      - in: header
-        name: token
-        description: Refresh token.
-        type: string
-        required: true
+      security:
+        - accessToken: []
       tags:
       - Session
       responses:
@@ -111,12 +103,8 @@ paths:
     get:
       summary: List of all sermons.
       description: Retrieve all sermons data.
-      parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: false
+      security:
+        - accessToken: []
       tags:
       - Sermons
       responses:
@@ -135,17 +123,14 @@ paths:
     put:
       summary: Retrieve one sermon data.
       description: Retrieve one sermon data, increase views count and if bearer token exist, mark a sermon as played by a current user.
+      security:
+        - accessToken: []
       parameters:
       - in: path
         name: id
         description: The sermon id.
         type: string
         required: true
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: false
       tags:
       - Sermons
       responses:
@@ -202,12 +187,9 @@ paths:
     post:
       summary: Vote for tags
       description: Vote for one or three tags per sermon
+      security:
+        - accessToken: []
       parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
       - in: path
         name: id
         description: Sermon ID
@@ -245,12 +227,9 @@ paths:
     post:
       summary: Create comment for the sermon
       description: Create comment for the sermon.
+      security:
+        - accessToken: []
       parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
       - in: path
         name: id
         description: The sermon id.
@@ -278,12 +257,9 @@ paths:
     put:
       summary: Update comment for the sermon
       description: Update comment for the sermon.
+      security:
+        - accessToken: []
       parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
       - in: path
         name: id
         description: The sermon id.
@@ -315,12 +291,9 @@ paths:
     delete:
       summary: Delete comment for the sermon
       description: Delete comment for the sermon.
+      security:
+        - accessToken: []
       parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
       - in: path
         name: id
         description: The sermon id.
@@ -346,12 +319,9 @@ paths:
     post:
       summary: Add one sermon to my favorites list.
       description: Add one sermon to my favorites list.
+      security:
+        - accessToken: []
       parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
       - in: path
         name: id
         description: The sermon id.
@@ -370,12 +340,9 @@ paths:
     delete:
       summary: Remove this sermon to favorite list.
       description: Remove this sermon to favorite list.
+      security:
+        - accessToken: []
       parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
       - in: path
         name: id
         description: The sermon id.
@@ -395,12 +362,8 @@ paths:
     get:
       summary: retrieve all sermons from my favorite list.
       description: retrieve all sermons from my favorite list.
-      parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
+      security:
+        - accessToken: []
       tags:
       - Favorites
       responses:
