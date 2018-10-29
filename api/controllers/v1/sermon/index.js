@@ -51,6 +51,12 @@ module.exports = {
       delete sermon.duration
     }));
 
+    sermons.sort((a, b) => {
+      var textA = a.title.toUpperCase();
+      var textB = b.title.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+
     return exits.success(sermons);
   }
 
