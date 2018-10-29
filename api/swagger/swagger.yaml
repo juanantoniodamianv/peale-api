@@ -150,9 +150,7 @@ paths:
       - Sermons
       responses:
         200:
-          description: Sermon retrieved successfully.
-          schema:
-            $ref: '#/definitions/Sermon'
+          description: OK
         default:
           description: Unexpected error
           schema:
@@ -179,8 +177,8 @@ paths:
 
   /tags/{id}:
     get:
-      summary: Show one tag
-      description: Retrieve one tag data
+      summary: Show one tag.
+      description: Tag retrieved successfully.
       parameters:
       - in: path
         name: id
@@ -191,8 +189,11 @@ paths:
       - Tags
       responses:
         200: 
-          description: successfully retrieved tag.
-        default:
+          description: Tag retrieved successfully.
+          schema:
+            type: object
+            $ref: '#/definitions/TagsComplete'
+        401:
           description: Unexpected error
           schema:
             $ref: '#definitions/Error'
@@ -221,7 +222,7 @@ paths:
       - Tags
       responses:
         200: 
-          description: successfully voted tags.
+          description: Tag voted successfully.
         default:
           description: Unexpected error
           schema:
@@ -360,11 +361,11 @@ paths:
       - Favorites
       responses:
         200:
-          description: Succesfully added this sermon to favorite list.
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#definitions/Error'
+          description: Sermon successfully added to my favorites.
+        201:
+          description: Sermon already added to my favorites.
+        401:
+          description: Unauthorized request.
 
     delete:
       summary: Remove this sermon to favorite list.
@@ -384,11 +385,11 @@ paths:
       - Favorites
       responses:
         200:
-          description: Succesfully added this sermon to my favorites list.
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#definitions/Error'
+          description: Sermon successfully removed from my favorites.
+        404:
+          description: Sermon is not added to my favorites.
+        401:
+          description: Unauthorized request.
 
   /sermons/favorite:
     get:
@@ -404,13 +405,15 @@ paths:
       - Favorites
       responses:
         200:
-          description: Succesfully retrieved all sermons from my favorite list.
+          description: All favorites successfully retrieved.
           schema:
-            $ref: '#definitions/Sermons'
-        default:
-          description: Unexpected error
+            type: array
+            items:
+              $ref: '#/definitions/Sermons'
+        401:
+          description: Unauthorized request.
           schema:
-            $ref: '#definitions/Error'
+            $ref: '#/definitions/Error'
     
 
   

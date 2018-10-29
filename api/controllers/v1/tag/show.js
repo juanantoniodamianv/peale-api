@@ -19,7 +19,7 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'All tags retrieved successfully.',
+      description: 'Tag retrieved successfully.',
     },
 
     unauthorized: {

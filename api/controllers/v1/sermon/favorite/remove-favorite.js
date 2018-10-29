@@ -18,7 +18,7 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode: 200,
+      statusCode: 201,
       description: 'Sermon successfully removed from my favorites.',
     },
 
