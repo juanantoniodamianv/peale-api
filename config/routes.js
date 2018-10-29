@@ -50,13 +50,6 @@ module.exports.routes = {
   'DELETE /v1/sermons/:id/favorite': { action: 'v1/sermon/favorite/remove-favorite' },
   'GET /v1/sermons/favorite': { action: 'v1/sermon/favorite/index' },
 
-  /* Add/Remove Sermon to my viewed list */
-  'POST /v1/sermons/:id/viewed': { action: 'v1/sermon/viewed/add-viewed' },
-  'DELETE /v1/sermons/:id/viewed': { action: 'v1/sermon/viewed/remove-viewed' },
-
-  /* Increment Sermon Views */
-  'PUT /v1/sermons/:id/increment-view': { action: 'v1/sermon/increment-view' },
-
   /* Create/Delete/Edit/Index Comments */
   'POST /v1/sermons/:id/comments': { action: 'v1/comment/create' },
   'GET /v1/sermons/:id/comments': { action: 'v1/comment/index' },
