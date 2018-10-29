@@ -51,7 +51,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "",
       "package": "base",
       "type": "video",
-      "duration": 600,
+      "duration": 360,
       "tags": {
         "Great Introduction": 10,
         "Humorous": 2,
@@ -86,7 +86,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "Why are you in despair, O my soul? And why have you become disturbed within me? Hope in God, for I shall yet praise Him, The help of my countenance and my God.",
       "package": "base",
       "type": "video",
-      "duration": 500,
+      "duration": 300,
       "tags": {
         "Great Introduction": 10,
         "Empowering": 5,
@@ -121,7 +121,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "Do not be impatient! Wait for the Lord, and he will come and save you. Yes, wait and he will help you.",
       "package": "base",
       "type": "video",
-      "duration": 600,
+      "duration": 360,
       "tags": {
         "Great Introduction": 10,
         "Faith Building": 3,
@@ -158,7 +158,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "",
       "package": "base",
       "type": "video",
-      "duration": 600,
+      "duration": 360,
       "tags": {
         "Great Introduction": 10,
         "Faith Building": 5,
@@ -190,7 +190,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "",
       "package": "base",
       "type": "video",
-      "duration": 600,
+      "duration": 360,
       "tags": {
         "Great Introduction": 10,
         "Liberating": 2,
@@ -227,7 +227,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "",
       "package": "base",
       "type": "video",
-      "duration": 600,
+      "duration": 360,
       "tags": {
         "Great Introduction": 10,
         "Encouraging": 4,
@@ -264,7 +264,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "",
       "package": "base",
       "type": "video",
-      "duration": 700,
+      "duration": 420,
       "tags": {
         "Great Introduction": 10,
         "Comforting": 5,
@@ -301,7 +301,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "",
       "package": "base",
       "type": "video",
-      "duration": 600,
+      "duration": 360,
       "tags": {
         "Great Introduction": 10,
         "Informative": 3,
@@ -338,7 +338,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "7:24) Everyone who hears these words of mine and does them is like a wise man who built his house on rock. 25) The rain fell, the flood came, and the winds beat against that house, but it did not collapse because it had been founded on rock. 26) Everyone who hears these words of mine and does not do them is like a foolish man who built his house on sand. 27) The rain fell, the flood came, and the winds beat against that house, and it collapsed; it was utterly destroyed! -- 15:12) My commandment is this: Love each other as I have loved you.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Fresh": 11,
         "Timeless": 1
@@ -353,7 +353,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:12) Then Jesus spoke out again, “I am the light of the world. The one who follows me will never walk in darkness, but will have the light of life.” --  9:12) He said to them, “Elijah does indeed come first, and restores all things. And why is it written that the Son of Man must suffer many things and be despised? --  9:29) Then he touched their eyes saying, “Let it be done for you according to your faith.” -- ",
       "package": "base",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Energizing": 11,
         "Uplifting": 2,
@@ -387,7 +387,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:20) The one who deals wisely in a matter will find success, and blessed is the one who trusts in the Lord. --  13:17) If you understand these things, you will be blessed if you do them. -- 2:5) You should have the same attitude toward one another that Christ Jesus had,",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Joyful": 11,
         "Healing": 2,
@@ -409,7 +409,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.”",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Humorous": 11,
         "Encouraging": 1,
@@ -430,7 +430,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:24) For in hope we were saved. Now hope that is seen is not hope, because who hopes for what he sees? --  13:13) And now these three remain: faith, hope, and love. But the greatest of these is love.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Enlivening": 10,
         "Energizing": 2,
@@ -462,7 +462,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "34:4) I sought the Lord’s help and he answered me; he delivered me from all my fears. --  41:13) For I am the Lord your God, the one who takes hold of your right hand, who says to you, ‘Don’t be afraid, I am helping you.’",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Faith Building": 13,
         "Encouraging": 3,
@@ -489,7 +489,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.”",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Faith Building": 1,
@@ -512,7 +512,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:9) I repeat, be strong and brave! Don’t be afraid and don’t panic, for I, the Lord your God, am with you in all you do.” --  22:23) If you return to the Almighty, you will be built up; if you remove wicked behavior far from your tent,",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Fresh": 10,
         "Inspiring": 1,
@@ -529,7 +529,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:8) This law scroll must not leave your lips! You must memorize it day and night so you can carefully obey all that is written in it. Then you will prosper and be successful.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Though Provoking": 10,
         "Faith Building": 1,
@@ -546,7 +546,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:20) The one who deals wisely in a matter will find success, and blessed is the one who trusts in the Lord.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Refreshing;": 10,
         "Empowering": 2,
@@ -569,7 +569,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:7) Make sure you are very strong and brave! Carefully obey all the law my servant Moses charged you to keep! Do not swerve from it to the right or to the left, so that you may be successful in all you do. 8) This law scroll must not leave your lips! You must memorize it day and night so you can carefully obey all that is written in it. Then you will prosper and be successful. 9) I repeat, be strong and brave! Don’t be afraid and don’t panic, for I, the Lord your God, am with you in all you do.”",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Encouraging": 1,
@@ -586,7 +586,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "3:13) Blessed is the one who finds wisdom, and the one who obtains understanding. --  4:7) And the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Edifying": 10,
         "Faith Building": 1,
@@ -619,7 +619,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "14:27) Peace I leave with you; my peace I give to you; I do not give it to you as the world does. Do not let your hearts be distressed or lacking in courage.  4:7) And the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Relaxing": 10,
         "Mind Changing": 2,
@@ -641,7 +641,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "41:13) For I am the Lord your God, the one who takes hold of your right hand, who says to you, ‘Don’t be afraid, I am helping you.’ --  23:4) Even when I must walk through the darkest valley, I fear no danger, for you are with me; your rod and your staff reassure me.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Humorous": 10,
         "Encouraging": 1,
@@ -660,7 +660,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:3) For God achieved what the law could not do because it was weakened through the flesh. By sending his own Son in the likeness of sinful flesh and concerning sin, he condemned sin in the flesh, --  18:19) Again, I tell you the truth, if two of you on earth agree about whatever you ask, my Father in heaven will do it for you. 20) For where two or three are assembled in my name, I am there among them.”",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 11,
         "Energizing": 1,
@@ -678,7 +678,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:23) to be renewed in the spirit of your mind,",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Visionary": 1,
         "Useful": 1,
@@ -709,7 +709,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:4) In him was life, and the life was the light of mankind. --  8:3) When I look up at the heavens, which your fingers made, and see the moon and the stars, which you set in place, 4) Of what importance is the human race, that you should notice them? Of what importance is mankind, that you should pay attention to them, 5) and make them a little less than the heavenly beings? You grant mankind honor and majesty;",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Useful": 10,
         "Hopeful": 1,
@@ -726,7 +726,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "24:49) And look, I am sending you what my Father promised. But stay in the city until you have been clothed with power from on high.”",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Humorous": 1,
@@ -752,7 +752,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me. --  127:2) It is vain for you to rise early, come home late, and work so hard for your food. Yes, he can provide for those whom he loves even when they sleep.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 11,
         "Mind Changing": 2,
@@ -776,7 +776,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "37:5) Commit your future to the Lord! Trust in him, and he will act on your behalf. --  5:6) And God will exalt you in due time, if you humble yourselves under his mighty hand --  10:13) No trial has overtaken you that is not faced by others. And God is faithful: He will not let you be tried beyond what you are able to bear, but with the trial will also provide a way out so that you may be able to endure it. --  118:24) This is the day the Lord has brought about. We will be happy and rejoice in it.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Useful": 10,
         "Enlightening": 1
@@ -791,7 +791,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 1,
         "Fresh": 1,
@@ -814,7 +814,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "25:13) Therefore stay alert, because you do not know the day or the hour. --  2:7) He stores up effective counsel for the upright, and is like a shield for those who live with integrity, --  27:3) Even when an army is deployed against me, I do not fear. Even when war is imminent, I remain confident. --  26:24) The Lord appeared to him that night and said, “I am the God of your father Abraham. Do not be afraid, for I am with you. I will bless you and multiply your descendants for the sake of my servant Abraham.” --  14:27) “Peace I leave with you; my peace I give to you; I do not give it to you as the world does. Do not let your hearts be distressed or lacking in courage.",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Timeless": 10,
         "Mind Changing": 1,
@@ -834,7 +834,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:23) to be renewed in the spirit of your mind, --  10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly. --  6:4) Therefore we have been buried with him through baptism into death, in order that just as Christ was raised from the dead through the glory of the Father, so we too may live a new life. --  118:24) This is the day the Lord has brought about. We will be happy and rejoice in it. --  4:20) May glory be given to God our Father forever and ever. Amen. -- ",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Energizing": 10,
         "Heartening": 1
@@ -849,7 +849,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "15:12) My commandment is this: Love each other as I have loved you. --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.”",
       "package": "premium",
       "type": "video",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Informative": 10,
         "Empowering": 1,
@@ -869,7 +869,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly. --  13:13) And now these three remain: faith, hope, and love. But the greatest of these is love.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspirational": 10,
         "Hopeful": 3
@@ -884,7 +884,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me. --  18:3) and said, “I tell you the truth, unless you turn around and become like little children, you will never enter the kingdom of heaven!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 11,
         "Useful": 1,
@@ -900,7 +900,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith. --  5:25) This is the writing that was inscribed: MENE, MENE, TEQEL, and PHARSIN.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10
       }
@@ -914,7 +914,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "30:15) For this is what the master, the Lord, the Holy One of Israel says: “If you repented and patiently waited for me, you would be delivered; if you calmly trusted in me you would find strength, but you are unwilling.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 14,
         "Healing": 1,
@@ -941,7 +941,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "58:9) Then you will call out, and the Lord will respond; you will cry out, and he will reply, ‘Here I am.’ You must remove the burdensome yoke from among you and stop pointing fingers and speaking sinfully. --  18:20) For where two or three are assembled in my name, I am there among them.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Faith building": 10,
         "Heartening": 1,
@@ -959,7 +959,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "22:23) If you return to the Almighty, you will be built up; if you remove wicked behavior far from your tent, --  4:7) And the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Liberating": 1,
@@ -976,7 +976,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly. --  21:22) And whatever you ask in prayer, if you believe, you will receive.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 11,
         "Inspiring": 2,
@@ -1000,7 +1000,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "23:7) for he is like someone calculating the cost in his mind. “Eat and drink,” he says to you, but his heart is not with you; --  9:27) But I tell you most certainly, there are some standing here who will not experience death before they see the kingdom of God.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 10
       }
@@ -1014,7 +1014,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "22:29) When people are brought low and you say ‘Lift them up!’ then he will save the downcast; --  14:12) I tell you the solemn truth, the person who believes in me will perform the miraculous deeds that I am doing, and will perform greater deeds than these, because I am going to the Father. --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Faith building": 10,
         "Enlightening": 2,
@@ -1030,7 +1030,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly. --  6:4) Therefore we have been buried with him through baptism into death, in order that just as Christ was raised from the dead through the glory of the Father, so we too may live a new life.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10
       }
@@ -1044,7 +1044,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "34:4) I sought the Lord’s help and he answered me; he delivered me from all my fears. --  4:6) Do not be anxious about anything. Instead, in every situation, through prayer and petition with thanksgiving, tell your requests to God.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Comforting": 14,
         "Uplifting": 3,
@@ -1076,7 +1076,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "3:2) Dear friends, we are God’s children now, and what we will be has not yet been revealed. We know that whenever it is revealed we will be like him, because we will see him just as he is. --  4:13) I am able to do all things through the one who strengthens me.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 11,
         "Thought Provoking": 1,
@@ -1093,7 +1093,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:8) for you were at one time darkness, but now you are light in the Lord. Walk as children of the light ;",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Energizing": 1,
@@ -1109,7 +1109,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:8) But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the farthest parts of the earth.” --  4:13) I am able to do all things through the one who strengthens me.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Encouraging": 1,
@@ -1125,7 +1125,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "3:13) Brothers and sisters, I do not consider myself to have attained this. Instead I am single-minded: Forgetting the things that are behind and reaching out for the things that are ahead, 14) with this goal in mind, I strive toward the prize of the upward call of God in Christ Jesus.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Stimulating": 10,
         "Mind Changing": 1,
@@ -1142,7 +1142,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "23:6) Surely your goodness and faithfulness will pursue me all my days, and I will live in the Lord’s house for the rest of my life.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Instructional": 10,
         "Visionary": 1,
@@ -1179,7 +1179,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me. --  19:12) After the earthquake, there was a fire, but the Lord was not in the fire. After the fire, there was a soft whisper. --  30:15) For this is what the master, the Lord, the Holy One of Israel says: “If you repented and patiently waited for me, you would be delivered; if you calmly trusted in me you would find strength, but you are unwilling. --  4:7) And the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Soothing": 10,
         "Hopeful": 1,
@@ -1204,7 +1204,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:16) So confess your sins to one another and pray for one another so that you may be healed. The prayer of a righteous person has great effectiveness.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Hopeful": 1,
         "Calming": 1,
@@ -1225,7 +1225,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:39) Whoever finds his life will lose it, and whoever loses his life because of me will find it.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Illuminating": 10,
         "Inspiring": 1,
@@ -1242,7 +1242,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "118:24) This is the day the Lord has brought about. We will be happy and rejoice in it. --  127:2) It is vain for you to rise early, come home late, and work so hard for your food. Yes, he can provide for those whom he loves even when they sleep.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Enlightening": 1,
         "Faith Building": 7,
@@ -1268,7 +1268,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "6:4) Therefore we have been buried with him through baptism into death, in order that just as Christ was raised from the dead through the glory of the Father, so we too may live a new life. --  21:4) He will wipe away every tear from their eyes, and death will not exist any more ; or mourning, or crying, or pain, for the former things have ceased to exist.” --  18:3) and said, “I tell you the truth, unless you turn around and become like little children, you will never enter the kingdom of heaven! --  15:3) You are clean already because of the word that I have spoken to you.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Enlivening": 10,
         "Fresh": 1,
@@ -1290,7 +1290,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "40:31) But those who wait for the Lord’s help find renewed strength; they rise up as if they had eagles’ wings, they run without growing weary, they walk without getting tired.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Invigorating": 10,
         "Energizing": 0,
@@ -1308,7 +1308,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:36) But Jesus, paying no attention to what was said, told the synagogue ruler, “Do not be afraid; just believe.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Comforting": 10
       }
@@ -1322,7 +1322,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:16) For I am not ashamed of the gospel, for it is God’s power for salvation to everyone who believes, to the Jew first and also to the Greek. --  1:12) But to all who have received him ; those who believe in his name ; he has given the right to become God’s children --  1:8) But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the farthest parts of the earth.” --  8:20) Jesus said to him, “Foxes have dens, and the birds in the sky have nests, but the Son of Man has no place to lay his head.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Timeless": 2,
         "Inspiring": 3,
@@ -1351,7 +1351,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Humorous": 10
       }
@@ -1365,7 +1365,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "19:18) You must not take vengeance or bear a grudge against the children of your people, but you must love your neighbor as yourself. I am the Lord. --  5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith. --  10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Invigorating": 10,
         "Faith Building": 1,
@@ -1384,7 +1384,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.” --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Energizing": 10,
         "Useful": 1,
@@ -1400,7 +1400,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "12:2) Do not be conformed to this present world, but be transformed by the renewing of your mind, so that you may test and approve what is the will of God ; what is good and well-pleasing and perfect. --  2:5) You should have the same attitude toward one another that Christ Jesus had,",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 18,
         "Enlightening": 3,
@@ -1433,7 +1433,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "2:14) But thanks be to God who always leads us in triumphal procession in Christ and who makes known through us the fragrance that consists of the knowledge of him in every place.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 11,
         "Energizing": 1,
@@ -1455,7 +1455,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "19:26) Jesus looked at them and said, “With man this is impossible, but with God all things are possible.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Fresh": 1,
         "Energizing": 1,
@@ -1476,7 +1476,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "18:31) Throw away all your sins you have committed and fashion yourselves a new heart and a new spirit! Why should you die, O house of Israel?",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Enlivening": 10,
         "Healing": 0,
@@ -1493,7 +1493,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "37:5) This is what the sovereign Lord says to these bones: Look, I am about to infuse breath into you and you will live.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Visionary": 11,
         "Energizing": 2,
@@ -1520,7 +1520,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:17) So then, if anyone is in Christ, he is a new creation; what is old has passed away ; look, what is new has come!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Healing": 1,
@@ -1536,7 +1536,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Thought provoking": 10,
         "Empowering": 1
@@ -1551,7 +1551,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "118:24) This is the day the Lord has brought about. We will be happy and rejoice in it.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Provocative": 10,
         "Refreshing": 1,
@@ -1579,7 +1579,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me. --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Mind changing": 10
       }
@@ -1593,7 +1593,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Stimulating": 10,
         "Thought Provoking": 1,
@@ -1629,7 +1629,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:19) I will give you the keys of the kingdom of heaven. Whatever you bind on earth will have been bound in heaven, and whatever you release on earth will have been released in heaven.” --  6:38) Give, and it will be given to you: A good measure, pressed down, shaken together, running over, will be poured into your lap. For the measure you use will be the measure you receive.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Informative": 10,
         "Mind Changing": 0,
@@ -1646,7 +1646,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "37:5) Commit your future to the Lord! Trust in him, and he will act on your behalf. --  10:13) No trial has overtaken you that is not faced by others. And God is faithful: He will not let you be tried beyond what you are able to bear, but with the trial will also provide a way out so that you may be able to endure it. --  118:24) This is the day the Lord has brought about. We will be happy and rejoice in it.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Useful": 10,
         "Comforting": 1
@@ -1661,7 +1661,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "17:22) A cheerful heart brings good healing, but a crushed spirit dries up the bones. --  14:27) Peace I leave with you; my peace I give to you; I do not give it to you as the world does. Do not let your hearts be distressed or lacking in courage. --  23:1) A psalm of David. The Lord is my shepherd, I lack nothing. 2) He takes me to lush pastures, he leads me to refreshing water. 3) He restores my strength. He leads me down the right paths for the sake of his reputation. 4) Even when I must walk through the darkest valley, I fear no danger, for you are with me; your rod and your staff reassure me.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Calming": 10,
         "Healing": 2,
@@ -1685,7 +1685,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "24:49) And look, I am sending you what my Father promised. But stay in the city until you have been clothed with power from on high.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 2,
         "Heartening": 1,
@@ -1712,7 +1712,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:14) Counsel and sound wisdom belong to me; I possess understanding and might.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 10
       }
@@ -1726,7 +1726,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:12) But to all who have received him ; those who believe in his name ; he has given the right to become God’s children",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 10
       }
@@ -1740,7 +1740,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:4) In him was life, and the life was the light of mankind. --  8:3) When I look up at the heavens, which your fingers made, and see the moon and the stars, which you set in place, 4) Of what importance is the human race, that you should notice them? Of what importance is mankind, that you should pay attention to them, 5) and make them a little less than the heavenly beings? You grant mankind honor and majesty;",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Invigorating": 10,
         "Fresh": 1
@@ -1755,7 +1755,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Energizing": 11,
         "Encouraging": 1,
@@ -1771,7 +1771,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "14:19) In a little while the world will not see me any longer, but you will see me; because I live, you will live too. --  11:25) Jesus said to her, “I am the resurrection and the life. The one who believes in me will live even if he dies, --  14:27) Peace I leave with you; my peace I give to you; I do not give it to you as the world does. Do not let your hearts be distressed or lacking in courage. --  14:2) and he said to his servants, “This is John the Baptist. He has been raised from the dead! And because of this, miraculous powers are at work in him.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspirational": 10,
         "Uplifting": 2,
@@ -1801,7 +1801,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "11:24) For this reason I tell you, whatever you pray and ask for, believe that you have received it, and it will be yours.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 10,
         "Energizing": 2,
@@ -1831,7 +1831,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "17:28) For in him we live and move about and exist, as even some of your own poets have said, ‘For we too are his offspring.’ --  5:17) So then, if anyone is in Christ, he is a new creation; what is old has passed away ; look, what is new has come!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Invigorating": 10,
         "Encouraging": 2,
@@ -1851,7 +1851,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.” --  11:22) Jesus said to them, “Have faith in God. 23) I tell you the truth, if someone says to this mountain, ‘Be lifted up and thrown into the sea,’ and does not doubt in his heart but believes that what he says will happen, it will be done for him. 24) For this reason I tell you, whatever you pray and ask for, believe that you have received it, and it will be yours. --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.” 21) [[EMPTY]]",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 10,
         "Mind Changing": 2,
@@ -1869,7 +1869,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith. --  4:13) I am able to do all things through the one who strengthens me.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 10,
         "Uplifting": 1
@@ -1884,7 +1884,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith. --  5:11) Therefore encourage one another and build up each other, just as you are in fact doing.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 13,
         "Energizing": 1,
@@ -1913,7 +1913,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "6:4) Therefore we have been buried with him through baptism into death, in order that just as Christ was raised from the dead through the glory of the Father, so we too may live a new life.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Invigorating": 10,
         "Humorous": 10,
@@ -1940,7 +1940,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "34:4) I sought the Lord’s help and he answered me; he delivered me from all my fears. --  41:13) For I am the Lord your God, the one who takes hold of your right hand, who says to you, ‘Don’t be afraid, I am helping you.’ --  13:13) And now these three remain: faith, hope, and love. But the greatest of these is love. --  9:1) After Jesus called the twelve together, he gave them power and authority over all demons and to cure diseases, --  18:3) and said, “I tell you the truth, unless you turn around and become like little children, you will never enter the kingdom of heaven!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Calming": 10,
         "Uplifting": 1,
@@ -1958,7 +1958,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:33) I have told you these things so that in me you may have peace. In the world you have trouble and suffering, but take courage ; I have conquered the world.” --  8:31) What then shall we say about these things? If God is for us, who can be against us? --  22:21) Reconcile yourself with God, and be at peace with him; in this way your prosperity will be good.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspirational": 10,
         "Humorous": 1,
@@ -1980,7 +1980,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:33) I have told you these things so that in me you may have peace. In the world you have trouble and suffering, but take courage ; I have conquered the world.” --  9:14) When they came to the disciples, they saw a large crowd around them and experts in the law arguing with them. 15) When the whole crowd saw him, they were amazed and ran at once and greeted him. 16) He asked them, “What are you arguing about with them?” 17) A member of the crowd said to him, “Teacher, I brought you my son, who is possessed by a spirit that makes him mute. 18) Whenever it seizes him, it throws him down, and he foams at the mouth, grinds his teeth, and becomes rigid. I asked your disciples to cast it out, but they were not able to do so.” 19) He answered them, “You unbelieving generation! How much longer must I be with you? How much longer must I endure you? Bring him to me.” 20) So they brought the boy to him. When the spirit saw him, it immediately threw the boy into a convulsion. He fell on the ground and rolled around, foaming at the mouth. 21) Jesus asked his father, “How long has this been happening to him?” And he said, “From childhood. 22) It has often thrown him into fire or water to destroy him. But if you are able to do anything, have compassion on us and help us.” 23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.” 24) Immediately the father of the boy cried out and said, “I believe; help my unbelief!” 25) Now when Jesus saw that a crowd was quickly gathering, he rebuked the unclean spirit, saying to it, “Mute and deaf spirit, I command you, come out of him and never enter him again.” 26) It shrieked, threw him into terrible convulsions, and came out. The boy looked so much like a corpse that many said, “He is dead!” 27) But Jesus gently took his hand and raised him to his feet, and he stood up. 28) Then, after he went into the house, his disciples asked him privately, “Why couldn’t we cast it out?” 29) He told them, “This kind can come out only by prayer.” --  9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.” --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Though provoking": 10,
         "Encouraging": 1,
@@ -1998,7 +1998,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:20) The one who deals wisely in a matter will find success, and blessed is the one who trusts in the Lord.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 11,
         "Mind Changing": 0,
@@ -2025,7 +2025,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:12) But to all who have received him ; those who believe in his name ; he has given the right to become God’s children",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Energizing": 1
@@ -2040,7 +2040,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "46:1) For the music director; by the Korahites; according to the alamoth style; a song. God is our strong refuge; he is truly our helper in times of trouble. 2) For this reason we do not fear when the earth shakes, and the mountains tumble into the depths of the sea, 3) when its waves crash and foam, and the mountains shake before the surging sea. (Selah) --  5:17) So then, if anyone is in Christ, he is a new creation; what is old has passed away ; look, what is new has come!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 13,
         "Refreshing": 1,
@@ -2067,7 +2067,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "18:19) Again, I tell you the truth, if two of you on earth agree about whatever you ask, my Father in heaven will do it for you. --  24:32) They said to each other, “Didn’t our hearts burn within us while he was speaking with us on the road, while he was explaining the scriptures to us?” --  13:8) Jesus Christ is the same yesterday and today and forever! --  34:4) I sought the Lord’s help and he answered me; he delivered me from all my fears. --  33:11) The Lord would speak to Moses face to face, the way a person speaks to a friend. Then Moses would return to the camp, but his servant, Joshua son of Nun, a young man, did not leave the tent.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Comforting": 11,
         "Uplifting": 1,
@@ -2088,7 +2088,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "21:21) Jesus answered them, “I tell you the truth, if you have faith and do not doubt, not only will you do what was done to the fig tree, but even if you say to this mountain, ‘Be lifted up and thrown into the sea,’ it will happen. --  2:5) You should have the same attitude toward one another that Christ Jesus had,",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 12,
         "Informative": 10,
@@ -2114,7 +2114,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:8) This law scroll must not leave your lips! You must memorize it day and night so you can carefully obey all that is written in it. Then you will prosper and be successful.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10
       }
@@ -2128,7 +2128,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "23:7) for he is like someone calculating the cost in his mind. “Eat and drink,” he says to you, but his heart is not with you; --  10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Stimulating": 10,
         "Empowering": 1,
@@ -2153,7 +2153,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "17:28) For in him we live and move about and exist, as even some of your own poets have said, ‘For we too are his offspring.’",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Energizing": 12,
         "Visionary": 1,
@@ -2178,7 +2178,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Encouraging": 10,
@@ -2195,7 +2195,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:7) For God did not give us a Spirit of fear but of power and love and self-control. --  2:5) You should have the same attitude toward one another that Christ Jesus had,",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Faith Building": 0,
         "Hopeful": 1,
@@ -2214,7 +2214,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:8) But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the farthest parts of the earth.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10
       }
@@ -2228,7 +2228,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "2:5) You should have the same attitude toward one another that Christ Jesus had, --  17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Liberating": 10,
         "Visionary": 1,
@@ -2248,7 +2248,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "6:4) Therefore we have been buried with him through baptism into death, in order that just as Christ was raised from the dead through the glory of the Father, so we too may live a new life.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Encouraging": 10
       }
@@ -2262,7 +2262,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "40:31) But those who wait for the Lord’s help find renewed strength; they rise up as if they had eagles’ wings, they run without growing weary, they walk without getting tired. --  11:33) Through faith they conquered kingdoms, administered justice, gained what was promised, shut the mouths of lions, 34) quenched raging fire, escaped the edge of the sword, gained strength in weakness, became mighty in battle, put foreign armies to flight,",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 12,
         "Useful": 1,
@@ -2280,7 +2280,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "23:7) for he is like someone calculating the cost in his mind. “Eat and drink,” he says to you, but his heart is not with you; --  12:2) Do not be conformed to this present world, but be transformed by the renewing of your mind, so that you may test and approve what is the will of God ; what is good and well-pleasing and perfect.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Useful": 1,
@@ -2301,7 +2301,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:33) I have told you these things so that in me you may have peace. In the world you have trouble and suffering, but take courage ; I have conquered the world.” --  5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith. --  6:12) Compete well for the faith and lay hold of that eternal life you were called for and made your good confession for in the presence of many witnesses. --  9:24) Immediately the father of the boy cried out and said, “I believe; help my unbelief!” --  9:29) Then he touched their eyes saying, “Let it be done for you according to your faith.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 13,
         "Comforting": 1,
@@ -2322,7 +2322,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Thought provoking": 10,
         "Faith Building": 1,
@@ -2341,7 +2341,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "9:1) After Jesus called the twelve together, he gave them power and authority over all demons and to cure diseases, --  1:8) But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the farthest parts of the earth.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
     },
     {
       "fileName": "821017.mp3",
@@ -2352,7 +2352,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:1) From the elder, to Gaius my dear brother, whom I love in truth. 2) Dear friend, I pray that all may go well with you and that you may be in good health, just as it is well with your soul. 3) For I rejoiced greatly when the brothers came and testified to your truth, just as you are living according to the truth. 4) I have no greater joy than this: to hear that my children are living according to the truth. 5) Dear friend, you demonstrate faithfulness by whatever you do for the brothers (even though they are strangers). 6) They have testified to your love before the church. You will do well to send them on their way in a manner worthy of God. 7) For they have gone forth on behalf of “The Name,” accepting nothing from the pagans. 8) Therefore we ought to support such people, so that we become coworkers in cooperation with the truth. 9) I wrote something to the church, but Diotrephes, who loves to be first among them, does not acknowledge us. 10) Therefore, if I come, I will call attention to the deeds he is doing ; the bringing of unjustified charges against us with evil words! And not being content with that, he not only refuses to welcome the brothers himself, but hinders the people who want to do so and throws them out of the church! 11) Dear friend, do not imitate what is bad but what is good. The one who does good is of God; the one who does what is bad has not seen God. 12) Demetrius has been testified to by all, even by the truth itself. We also testify to him, and you know that our testimony is true. 13) I have many things to write to you, but I do not wish to write to you with pen and ink. 14) But I hope to see you right away, and we will speak face to face.  Peace be with you. The friends here greet you. Greet the friends there by name.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Thoughtful": 10,
         "Humorous": 1,
@@ -2385,7 +2385,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "6:30) Give to everyone who asks you, and do not ask for your possessions back from the person who takes them away. --  3:10) Bring the entire tithe into the storehouse so that there may be food in my temple. Test me in this matter,” says the Lord who rules over all, “to see if I will not open for you the windows of heaven and pour out for you a blessing until there is no room for it all. --  10:10) The thief comes only to steal and kill and destroy; I have come so that they may have life, and may have it abundantly.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Calming": 0,
         "Enlightening": 12,
@@ -2411,7 +2411,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "13:11) and a woman was there who had been disabled by a spirit for eighteen years. She was bent over and could not straighten herself up completely. 12) When Jesus saw her, he called her to him and said, “Woman, you are freed from your infirmity.” 13) Then he placed his hands on her, and immediately she straightened up and praised God.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Liberating": 1,
@@ -2429,7 +2429,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "27:1) By David. The Lord delivers and vindicates me! I fear no one! The Lord protects my life! I am afraid of no one! 2) When evil men attack me to devour my flesh, when my adversaries and enemies attack me, they stumble and fall. 3) Even when an army is deployed against me, I do not fear. Even when war is imminent, I remain confident. --  139:14) I will give you thanks because your deeds are awesome and amazing. You knew me thoroughly;",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Invigorating": 10,
         "Faith Building": 2,
@@ -2451,7 +2451,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "10:6) Then the spirit of the Lord will rush upon you and you will prophesy with them. You will be changed into a different person. --  6:14) Stand firm therefore, by fastening the belt of truth around your waist, by putting on the breastplate of righteousness, 15) by fitting your feet with the preparation that comes from the good news of peace, 16) and in all of this, by taking up the shield of faith with which you can extinguish all the flaming arrows of the evil one. 17) And take the helmet of salvation and the sword of the Spirit, which is the word of God.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 10,
         "Energizing": 1,
@@ -2467,7 +2467,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "17:20) He told them, “It was because of your little faith. I tell you the truth, if you have faith the size of a mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move; nothing will be impossible for you.” --  4:13) I am able to do all things through the one who strengthens me. --  11:24) For this reason I tell you, whatever you pray and ask for, believe that you have received it, and it will be yours.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Enlightening": 10,
         "Faith Building": 1,
@@ -2490,7 +2490,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "17:22) A cheerful heart brings good healing, but a crushed spirit dries up the bones. --  16:20) The one who deals wisely in a matter will find success, and blessed is the one who trusts in the Lord. --  15:11) I have told you these things so that my joy may be in you, and your joy may be complete. --  40:31) But those who wait for the Lord’s help find renewed strength; they rise up as if they had eagles’ wings, they run without growing weary, they walk without getting tired.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10
       }
@@ -2504,7 +2504,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "21:33) Heaven and earth will pass away, but my words will never pass away. --  15:12) My commandment is this ; to love one another just as I have loved you.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Informative": 10,
         "Healing": 1,
@@ -2520,7 +2520,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "14:1) Do not let your hearts be distressed. You believe in God; believe also in me. 2) There are many dwelling places in my Father’s house. Otherwise, I would have told you, because I am going away to make ready a place for you. 3) And if I go and make ready a place for you, I will come again and take you to be with me, so that where I am you may be too. --  49:10) They will not be hungry or thirsty; the sun’s oppressive heat will not beat down on them, for one who has compassion on them will guide them; he will lead them to springs of water. --  7:17) because the Lamb in the middle of the throne will shepherd them and lead them to springs of living water, and God will wipe away every tear from their eyes.” --  5:11) And this is the testimony: God has given us eternal life, and this life is in his Son. 12) The one who has the Son has this eternal life; the one who does not have the Son of God does not have this eternal life. 13) I have written these things to you who believe in the name of the Son of God so that you may know that you have eternal life.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 10,
         "Enlightening": 1
@@ -2535,7 +2535,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:12) But to all who have received him ; those who believe in his name ; he has given the right to become God’s children --  1:18) to preside over the day and the night, and to separate the light from the darkness. God saw that it was good.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Humorous": 10,
@@ -2556,7 +2556,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:4) because everyone who has been fathered by God conquers the world.This is the conquering power that has conquered the world: our faith.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Timeless": 1,
@@ -2574,7 +2574,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "6:23) Rejoice in that day, and jump for joy, because your reward is great in heaven. For their ancestors did the same things to the prophets. --  1:8) You have not seen him, but you love him. You do not see him now but you believe in him, and so you rejoice with an indescribable and glorious joy,",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Faith Building": 1,
@@ -2590,7 +2590,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me. --  9:23) Then Jesus said to him, “‘If you are able?’ All things are possible for the one who believes.” --  18:27) He replied, “What is impossible for mere humans is possible for God.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 12,
         "Mind Changing": 1
@@ -2604,7 +2604,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "16:20) The one who deals wisely in a matter will find success, and blessed is the one who trusts in the Lord. --  13:17) If you understand these things, you will be blessed if you do them. --  15:11) I have told you these things so that my joy may be in you, and your joy may be complete. --  2:5) You should have the same attitude toward one another that Christ Jesus had,",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Informative": 10
       }
@@ -2618,7 +2618,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:8) You have not seen him, but you love him. You do not see him now but you believe in him, and so you rejoice with an indescribable and glorious joy, --  2:5) You should have the same attitude toward one another that Christ Jesus had, --  4:4) Rejoice in the Lord always. Again I say, rejoice! --  15:11) I have told you these things so that my joy may be in you, and your joy may be complete. 12) My commandment is this ; to love one another just as I have loved you. --  14:27) Peace I leave with you; my peace I give to you; I do not give it to you as the world does. Do not let your hearts be distressed or lacking in courage. --  11:25) Jesus said to her, “I am the resurrection and the life. The one who believes in me will live even if he dies, --  1:8) But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the farthest parts of the earth.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Hopeful": 1,
@@ -2635,7 +2635,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "103:2) Praise the Lord, O my soul! Do not forget all his kind deeds! 3) He is the one who forgives all your sins, who heals all your diseases, 4) who delivers your life from the Pit, who crowns you with his loyal love and compassion, 5) who satisfies your life with good things, so your youth is renewed like an eagle’s.",
       "package": "base",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Beautiful": 1,
         "Helpful": 1,
@@ -2675,7 +2675,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me. --  8:31) What then shall we say about these things? If God is for us, who can be against us?",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 11,
         "Encouraging": 1,
@@ -2691,7 +2691,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "6:63) The Spirit is the one who gives life; human nature is of no help! The words that I have spoken to you are spirit and are life. --  16:10) concerning righteousness, because I am going to the Father and you will see me no longer; --  1:8) You have not seen him, but you love him. You do not see him now but you believe in him, and so you rejoice with an indescribable and glorious joy, --  1:6) This brings you great joy, although you may have to suffer for a short time in various trials. --  7:4) It is not the wife who has the rights to her own body, but the husband. In the same way, it is not the husband who has the rights to his own body, but the wife. --  38:7) when the morning stars sang in chorus, and all the sons of God shouted for joy?",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Joyful": 10,
         "Faith Building": 0,
@@ -2709,7 +2709,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "1:9) I repeat, be strong and brave! Don’t be afraid and don’t panic, for I, the Lord your God, am with you in all you do.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Mind Changing": 2
@@ -2724,7 +2724,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "5:17) So then, if anyone is in Christ, he is a new creation; what is old has passed away ; look, what is new has come!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Humorous": 10,
         "Inspiring": 10,
@@ -2740,7 +2740,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "11:25) Jesus said to her, “I am the resurrection and the life. The one who believes in me will live even if he dies, 26) and the one who lives and believes in me will never die. Do you believe this?” --  14:2) There are many dwelling places in my Father’s house. Otherwise, I would have told you, because I am going away to make ready a place for you.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Enlivening": 10,
         "Calming": 0,
@@ -2762,7 +2762,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:12) Then Jesus spoke out again, “I am the light of the world. The one who follows me will never walk in darkness, but will have the light of life.” --  9:12) He said to them, “Elijah does indeed come first, and restores all things. And why is it written that the Son of Man must suffer many things and be despised? --  9:29) Then he touched their eyes saying, “Let it be done for you according to your faith.”",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Faith Building": 1
@@ -2777,7 +2777,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "23:6) Surely your goodness and faithfulness will pursue me all my days, and I will live in the Lord’s house for the rest of my life. --  57:1) For the music director; according to the al-tashcheth style; a prayer of David, written when he fled from Saul into the cave. Have mercy on me, O God! Have mercy on me! For in you I have taken shelter. In the shadow of your wings I take shelter until trouble passes. --  91:11) For he will order his angels to protect you in all you do. --  107:28) They cried out to the Lord in their distress; he delivered them from their troubles. --  5:7) by casting all your cares on him because he cares for you.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10,
         "Heartening": 1,
@@ -2793,7 +2793,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "4:13) I am able to do all things through the one who strengthens me.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 11,
         "Empowering": 10,
@@ -2814,7 +2814,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "26:3) You keep completely safe the people who maintain their faith, for they trust in you.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Uplifting": 10,
         "Faith Building": 2,
@@ -2833,7 +2833,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "26:3) You keep completely safe the people who maintain their faith, for they trust in you.  14:27) Peace I leave with you; my peace I give to you; I do not give it to you as the world does. Do not let your hearts be distressed or lacking in courage.",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Empowering": 10
       }
@@ -2847,7 +2847,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:37) No, in all these things we have complete victory through him who loved us!",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Funny": 10,
         "Uplifting": 11,
@@ -2869,7 +2869,7 @@ module.exports.bootstrap = async function(done) {
       "bibleVerseText": "8:35) For the one who finds me finds life and receives favor from the Lord.  118:24) This is the day the Lord has brought about. We will be happy and rejoice in it.  ",
       "package": "premium",
       "type": "audio",
-      "duration": 2500,
+      "duration": 1500,
       "tags": {
         "Inspiring": 10,
         "Exciting": 10,
