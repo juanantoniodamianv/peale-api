@@ -26,8 +26,8 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-    var current_user
 
+    var current_user
     if (this.req.current_user !== undefined) {
       current_user = JSON.stringify(this.req.current_user[0].id)
     }
@@ -35,6 +35,8 @@ module.exports = {
     var sermons = await Sermon.find({});
 
     if (!sermons) throw { unauthorized: 'Unauthorized request.' };
+
+    /* Map all Sermons including fields not present in the original JSON */
 
     await Promise.all(sermons.map(async (sermon) => {
       var mediaFileURL = await sails.helpers.aws.s3.get.with({ fileName: sermon.fileName });
@@ -51,10 +53,16 @@ module.exports = {
       delete sermon.duration
     }));
 
-    var responseData = { sermons }
+    /* Sort Sermons by title (Case sensitive) */
 
-    return exits.success(responseData);
+    sermons.sort((a, b) => {
+      var textA = a.title.toUpperCase();
+      var textB = b.title.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+
+    return exits.success(sermons);
+
   }
-
 
 };

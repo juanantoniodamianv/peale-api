@@ -30,9 +30,7 @@ module.exports = {
 
     if (!tags) throw { unauthorized: 'Unauthorized request.' };
 
-    var responseData = { tags }
-
-    return exits.success(responseData);
+    return exits.success(tags);
   }
 
 

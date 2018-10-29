@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Remove this sermon to my favorites',
+  friendlyName: 'Remove this sermon from my favorites',
 
 
-  description: 'Remove this sermon to my favorites sermons',
+  description: 'Remove this sermon from my favorites sermons',
 
 
   inputs: {
