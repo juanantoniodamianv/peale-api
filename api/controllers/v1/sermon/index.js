@@ -51,9 +51,7 @@ module.exports = {
       delete sermon.duration
     }));
 
-    var responseData = { sermons }
-
-    return exits.success(responseData);
+    return exits.success(sermons);
   }
 
 

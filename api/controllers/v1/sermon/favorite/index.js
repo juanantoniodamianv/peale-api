@@ -32,15 +32,29 @@ module.exports = {
       .populate('user')
       .populate('sermon');
 
-    favorites.forEach(favorite => {
+    var favoriteSermons = []
+
+    favorites.forEach((favorite, value) => {
       delete favorite.user
+      favoriteSermons[value] = favorite.sermon
     })
 
-    var responseData = {
-      favorites
-    }
+    await Promise.all(favoriteSermons.map(async (sermon) => {
+      var mediaFileURL = await sails.helpers.aws.s3.get.with({ fileName: sermon.fileName });
+      sermon.played = current_user !== undefined ? await Viewed.isViewed(current_user, sermon.id) || false : false;
+      sermon.isFavorite = current_user !== undefined ? await Favorite.isFavorite(current_user, sermon.id) || false : false;
+      sermon.comments = await Comment.totalCount(sermon.id) || 0;
+      sermon.tags = await TagVote.get(sermon.id);
+      sermon.media = {
+        "url": mediaFileURL,
+        "type": sermon.type,
+        "duration": sermon.duration
+      };
+      delete sermon.type
+      delete sermon.duration
+    }));
 
-    return exits.success(responseData);
+    return exits.success(favoriteSermons);
 
   }
 
