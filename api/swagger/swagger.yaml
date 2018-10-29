@@ -557,12 +557,21 @@ definitions:
       username:
         type: string
         description: User's username
+        required: true
       password:
         type: string
         description: User's password
+        required: true
       confirmPassword:
         type: string
         description: User's password confirm
+        required: true
+      firstName:
+        type: string
+        required: true
+      lastName:
+        type: string
+        required: true
   
   UsernameForgotPassword:
     type: object
@@ -576,7 +585,24 @@ definitions:
     properties:
       user:
         type: object
-        description: User object
+        properties:
+          createdAt:
+            type: number
+            format: timestamp
+            description: Created at value, on timestamp.
+          updatedAt:
+            type: number
+            format: timestamp
+            description: Updated at value, on timestamp.
+          id:
+            type: number
+            description: Sermon ID, is unique value.
+          username:
+            type: string
+          firstName:
+            type: string
+          lastName:
+            type: string
       token:
         type: string
         description: User session token
