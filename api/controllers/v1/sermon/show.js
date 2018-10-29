@@ -26,15 +26,6 @@ module.exports = {
       statusCode: 401,
       description: 'Unauthorized request.',
     },
-    success: {
-      statusCode: 200,
-      description: 'Sermon retrieved successfully.',
-    },
-
-    unauthorized: {
-      statusCode: 401,
-      description: 'Unauthorized request.',
-    },
   },
 
 
