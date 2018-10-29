@@ -18,7 +18,7 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode: 204,
+      statusCode: 200,
       description: 'Sermon successfully removed from my favorites.',
     },
 
@@ -35,6 +35,7 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
+
     var current_user = JSON.stringify(this.req.current_user[0].id)
     var destroyed = await Favorite.destroy({ user: current_user, sermon: inputs.id }).fetch();
 
@@ -45,6 +46,5 @@ module.exports = {
     return exits.success('Sermon successfully removed from my favorites.');
 
   }
-
 
 };

@@ -25,6 +25,10 @@ module.exports.policies = {
 
   'v1/comment/index': true,
 
+  'v1/tag/index': true,
+
+  'v1/tag/show': true,
+
   'v1/sermon/index': ['tokenExist'],
 
   'v1/sermon/show': ['tokenExist'],
