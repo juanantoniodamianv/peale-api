@@ -121,51 +121,38 @@ paths:
       - Sermons
       responses:
         200:
-          description: successfully retrieved all sermons.
+          description: All sermons retrieved successfully.
           schema:
-            $ref: '#/definitions/Sermons'
-        default:
-          description: Unexpected error
+            type: array
+            items:
+              $ref: '#/definitions/Sermons'
+        401:
+          description: Unauthorized request.
           schema:
             $ref: '#/definitions/Error'
 
   /sermons/{id}:
-    get:
-      summary: Show one sermon.
-      description: Retrieve one sermon data.
+    put:
+      summary: Retrieve one sermon data.
+      description: Retrieve one sermon data, increase views count and if bearer token exist, mark a sermon as played by a current user.
       parameters:
       - in: path
         name: id
         description: The sermon id.
         type: string
         required: true
+      - in: header
+        name: token
+        description: Authorization token.
+        type: string
+        required: false
       tags:
       - Sermons
       responses:
         200:
-          description: successfully retrieved sermon.
+          description: Sermon retrieved successfully.
           schema:
             $ref: '#/definitions/Sermon'
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-  
-  /sermons/{id}/increment-view:
-    put:
-      summary: Increment view value for one sermon.
-      description: Increment view value, the default view value per new sermon is zero.
-      parameters:
-      - in: path
-        name: id
-        description: The sermon id.
-        type: string
-        required: true
-      tags:
-      - Sermons
-      responses:
-        200:
-          description: successfully increment view.
         default:
           description: Unexpected error
           schema:
@@ -180,8 +167,12 @@ paths:
       - Tags
       responses:
         200: 
-          description: successfully retrieved all tags.
-        default:
+          description: All tags retrieved successfully.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/TagsComplete'
+        401:
           description: Unexpected error
           schema:
             $ref: '#definitions/Error'
@@ -349,55 +340,6 @@ paths:
           schema:
             $ref: '#definitions/Error'
 
-  /sermons/{id}/viewed:
-    post:
-      summary: Add one sermon to my view list.
-      description: Add one sermon to my view list.
-      parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
-      - in: path
-        name: id
-        description: The sermon id.
-        type: string
-        required: true
-      tags:
-      - Played / Unplayed
-      responses:
-        200:
-          description: Succesfully added this sermon to viewed list.
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#definitions/Error'
-
-    delete:
-      summary: Remove this sermon to viewed list.
-      description: Remove this sermon to viewed list.
-      parameters:
-      - in: header
-        name: token
-        description: Authorization token.
-        type: string
-        required: true
-      - in: path
-        name: id
-        description: The sermon id.
-        type: string
-        required: true
-      tags:
-      - Played / Unplayed
-      responses:
-        200:
-          description: Succesfully added this sermon to my viewed list.
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#definitions/Error'
-
 
   /sermons/{id}/favorite:
     post:
@@ -475,15 +417,102 @@ paths:
 
 
 
-
 definitions:
 
   Sermons:
-    type: array
+    type: object
     properties:
-      sermons:
+      createdAt:
+        type: number
+        format: timestamp
+        description: Created at value, on timestamp.
+      updatedAt:
+        type: number
+        format: timestamp
+        description: Updated at value, on timestamp.
+      id:
+        type: number
+        description: Sermon ID, is unique value.
+      fileName:
+        type: string
+        description: File Name of Sermon, is unique value.
+      date:
+        type: string
+        format: date
+      title:
+        type: string
+        description: Tile of Sermon.
+      description: 
+        type: string
+        description: A little description for Sermon file.
+      bibleVerse:
+        type: string
+      bibleVerseText: 
+        type: string
+      package:
+        type: string
+      views:
+        type: number
+        description: Number of times the Sermon has been seen.
+      played:
+        type: boolean
+        description: Indicates whether the sermon has been seen or not.
+      isFavorite:
+        type: boolean
+        description: Indicates whether the sermon is favorite or not.
+      comments: 
+        type: number
+        description: Count value from comments for one sermon.
+      tags:
+        type: array
+        items:
+          $ref: '#definitions/Tags'
+        description: Associated tags.
+      media:
         type: object
-        description: Sermons object
+        $ref: '#definitions/Media'
+        description: Multimedia data.
+
+  
+
+  Tags:
+    type: object
+    properties:
+      id:
+        type: number
+      name:
+        type: string
+
+
+  TagsComplete:
+    type: object
+    properties:
+      createdAt:
+        type: number
+        format: timestamp
+        description: Created at value, on timestamp.
+      updatedAt:
+        type: number
+        format: timestamp
+        description: Updated at value, on timestamp.
+      id:
+        type: number
+      name:
+        type: string
+      description:
+        type: string
+
+  Media:
+    type: object
+    properties:
+      url:
+        type: string
+      type:
+        type: string
+      duration:
+        type: number
+
+
 
   Sermon:
     type: object
