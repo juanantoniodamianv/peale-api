@@ -68,7 +68,6 @@ module.exports = {
 
     tags.forEach(element => {
       element.id = element.tag.id
-      delete element.id
       element.name = element.tag.name
       delete element.tag
     })

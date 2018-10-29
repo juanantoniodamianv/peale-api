@@ -40,7 +40,7 @@ module.exports = {
 
   fillList: async () => {
     let tags = []
-    if(await Tag.count() < 1) {
+    if (await Tag.count() < 1) {
       tags = await Tag.createEach([
         { name: 'Calming' },
         { name: 'Comforting' },
