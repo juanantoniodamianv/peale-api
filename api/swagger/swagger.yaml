@@ -217,11 +217,21 @@ paths:
       description: Retrieve all comments by sermon id.
       tags:
       - Comments
+      parameters:
+      - in: path
+        name: id
+        description: The sermon id.
+        type: number
+        required: true
       responses:
-        200:
-          description: successfully retrieved comments
-        default:
-          description: Unexpected error
+        200: 
+          description: Commentary has been updated successfully.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Comments'
+        401:
+          description: Unauthorized request.
           schema:
             $ref: '#definitions/Error'
     post:
@@ -233,21 +243,21 @@ paths:
       - in: path
         name: id
         description: The sermon id.
-        type: string
+        type: number
         required: true
       - in: body
         name: commentary
         description: The commentary for the sermon
         required: true
         schema:
-          $ref: '#/definitions/Comment'
+          $ref: '#/definitions/CommentPost'
       tags:
       - Comments
       responses:
         200:
           description: Comment created successfully
           schema: 
-            $ref: '#definitions/CommentPost'
+            $ref: '#definitions/Comments'
         default:
           description: Unexpected error
           schema:
@@ -275,14 +285,14 @@ paths:
         description: The commentary for the sermon
         required: true
         schema:
-          $ref: '#/definitions/Comment'
+          $ref: '#/definitions/CommentPost'
       tags:
       - Comments
       responses:
         200:
           description: Comment updated successfully
           schema:
-            $ref: '#definitions/CommentPost'
+            $ref: '#definitions/Comments'
         default:
           description: Unexpected error
           schema:
@@ -439,7 +449,46 @@ definitions:
         $ref: '#definitions/Media'
         description: Multimedia data.
 
-  
+  Comments:
+    type: object
+    properties:
+      createdAt:
+        type: number
+        format: timestamp
+        description: Created at value, on timestamp.
+      updatedAt:
+        type: number
+        format: timestamp
+        description: Updated at value, on timestamp.
+      id:
+        type: number
+        description: Comment ID, is unique value.
+      commentary:
+        type: string
+      author:
+        type: object
+        $ref: '#definitions/Author'
+      sermon:
+        type: number
+        description: Sermon ID
+
+  Author:
+    type: object
+    properties:
+      createdAt:
+        type: number
+        format: timestamp
+      updatedAt:
+        type: number
+        format: timestamp  
+      id:
+        type: number
+      username:
+        type: string
+      firstName: 
+        type: string
+      lastName: 
+        type: string
 
   Tags:
     type: object
@@ -487,22 +536,14 @@ definitions:
         type: object
         description: Sermons object
 
-  Comment:
-    type: object
-    properties:
-      commentary:
-        type: string
-        description: Commentary
+
   
   CommentPost:
     type: object
     properties:
       comment:
-        type: object
-        description: Comment object
-      user:
-        type: object
-        description: Comment's author
+        type: string
+        description: Comment string
 
   UserCredentials:
     type: object
