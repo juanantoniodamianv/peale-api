@@ -198,8 +198,9 @@ paths:
       - in: body
         name: tag
         description: Array of Tag ID's
-        type: array
         required: true
+        schema:
+          $ref: '#/definitions/voteTag'
       tags:
       - Tags
       responses:
@@ -387,11 +388,6 @@ paths:
           description: Unauthorized request.
           schema:
             $ref: '#/definitions/Error'
-    
-
-  
-
-
 
 definitions:
 
@@ -498,7 +494,6 @@ definitions:
       name:
         type: string
 
-
   TagsComplete:
     type: object
     properties:
@@ -527,8 +522,6 @@ definitions:
       duration:
         type: number
 
-
-
   Sermon:
     type: object
     properties:
@@ -536,14 +529,20 @@ definitions:
         type: object
         description: Sermons object
 
-
-  
   CommentPost:
     type: object
     properties:
       commentary:
         type: string
         description: Comment string
+
+  voteTag:
+    type: object
+    properties:
+      tag:
+        type: array
+        description: Array of tags to be voted
+        default: []
 
   UserCredentials:
     type: object
@@ -554,7 +553,7 @@ definitions:
       password:
         type: string
         description: User's password
-  
+
   UserCredentialsSignUp:
     type: object
     properties:
@@ -576,7 +575,7 @@ definitions:
       lastName:
         type: string
         required: true
-  
+
   UsernameForgotPassword:
     type: object
     properties:
