@@ -87,6 +87,11 @@ module.exports = {
       via: "sermon"
     },
 
+    userTagVotes: {
+      collection: "userTagVote",
+      via: "sermon"
+    },
+
     comment: {
       collection: "comment",
       via: "sermon"

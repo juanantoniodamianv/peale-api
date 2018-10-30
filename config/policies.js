@@ -29,6 +29,8 @@ module.exports.policies = {
 
   'v1/tag/show': true,
 
+  'v1/tag/user-tag/vote': ['tokenExist'],
+
   'v1/sermon/index': ['tokenExist'],
 
   'v1/sermon/show': ['tokenExist'],

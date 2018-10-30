@@ -47,7 +47,13 @@ module.exports = {
 
 
     await Promise.all(tagIds.map(async (tagId) => {
-      TagVote.findOrCreate({ sermon: inputs.id, tag: tagId }, { vote: 1, sermon: inputs.id, tag: tagId })
+      var current_user
+      if (this.req.current_user !== undefined) {
+        current_user = JSON.stringify(this.req.current_user[0].id)
+      } else {
+        return exits.unauthorized({ message: 'Unauthorized request.' })
+      }
+      UserTagVote.findOrCreate({ sermon: inputs.id, tag: tagId, user: current_user }, { sermon: inputs.id, tag: tagId, user: current_user })
         .exec(async (err, tagVote, wasCreated) => {
 
           if (wasCreated) {

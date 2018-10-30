@@ -56,6 +56,11 @@ module.exports = {
       collection: "comment",
       via: "author"
     },
+    
+    userTagVotes: {
+      collection: "userTagVote",
+      via: "user"
+    },
 
   },
 

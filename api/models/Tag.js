@@ -36,6 +36,11 @@ module.exports = {
       via: "tag"
     },
 
+    userTagVotes: {
+      collection: "userTagVote",
+      via: "tag"
+    },
+
   },
 
   fillList: async () => {
