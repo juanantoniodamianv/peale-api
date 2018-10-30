@@ -349,21 +349,25 @@ paths:
           description: Unauthorized request.
 
     delete:
-      summary: Remove this sermon to favorite list.
-      description: Remove this sermon to favorite list.
+      summary: Remove sermons from the favorite list
+      description: Remove an array of sermons from the favorite list
       security:
         - accessToken: []
       parameters:
-      - in: path
+      - in: body
         name: id
-        description: The sermon id.
-        type: string
+        description: Array of sermons to be deleted from the favorites list
         required: true
+        schema:
+          $ref: '#/definitions/deleteFavorite'
       tags:
       - Favorites
       responses:
-        200:
-          description: Sermon successfully removed from my favorites.
+        201:
+          description: Array of sermons deleted from the favorites list
+          schema:
+            type: object
+            $ref: '#/definitions/favoritesDeleted'
         404:
           description: Sermon is not added to my favorites.
         401:
@@ -512,6 +516,16 @@ definitions:
       description:
         type: string
 
+  favoritesDeleted:
+    type: object
+    properties:
+      message:
+        type: string
+        default: Sermon successfully removed from the favorites list
+      statusCode:
+        type: number
+        default: 201
+
   Media:
     type: object
     properties:
@@ -542,6 +556,14 @@ definitions:
       tag:
         type: array
         description: Array of tags to be voted
+        default: []
+
+  deleteFavorite:
+    type: object
+    properties:
+      id:
+        type: array
+        description: Array of sermons to be deleted from the favorites list
         default: []
 
   UserCredentials:
