@@ -121,8 +121,8 @@ paths:
 
   /sermons/{id}:
     put:
-      summary: Retrieve one sermon data.
-      description: Retrieve one sermon data, increase views count and if bearer token exist, mark a sermon as played by a current user.
+      summary: Increase views count, mark a sermon as played.
+      description: Increase views count and if bearer token exist, mark a Sermon as played by a current user.
       security:
         - accessToken: []
       parameters:
