@@ -308,12 +308,12 @@ paths:
       - in: path
         name: id
         description: The sermon id.
-        type: string
+        type: number
         required: true
       - in: path
         name: commentId
         description: The comment id.
-        type: string
+        type: number
         required: true
       tags:
       - Comments

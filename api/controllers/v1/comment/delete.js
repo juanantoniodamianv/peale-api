@@ -47,7 +47,7 @@ module.exports = {
 
     if (current_user != commentUserId.author) { return exits.unauthorized('Unauthorized request.') }
 
-    var comment = await Comment.destroy({ id: inputs.commentId }).fetch();
+    var comment = await Comment.destroy({ id: commentUserId.id }).fetch();
 
     if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
 

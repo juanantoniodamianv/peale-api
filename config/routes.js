@@ -43,7 +43,7 @@ module.exports.routes = {
   /* Get all tags, get specific tag, vote a tag from the list */
   'GET /v1/tags': { action: 'v1/tag/index' },
   'GET /v1/tags/:id': { action: 'v1/tag/show' },
-  'POST /v1/sermons/:id/vote': { action: 'v1/tag/vote' },
+  'POST /v1/sermons/:id/vote': { action: 'v1/tag/user-tag/vote' },
 
   /* Get all favorites, Add/Remove Sermon from my favorites list */
   'GET /v1/sermons/favorite': { action: 'v1/sermon/favorite/index' },
