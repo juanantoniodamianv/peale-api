@@ -559,26 +559,6 @@ definitions:
       description:
         type: string
 
-  favoritesDeleted:
-    type: object
-    properties:
-      message:
-        type: string
-        default: Sermon successfully removed from the favorites list
-      statusCode:
-        type: number
-        default: 201
-
-  favoritesCreated:
-    type: object
-    properties:
-      message:
-        type: string
-        default: Sermon successfully added to my favorites
-      statusCode:
-        type: number
-        default: 200
-
   Media:
     type: object
     properties:
@@ -611,6 +591,37 @@ definitions:
         type: array
         description: Array of sermons to be deleted from the favorites list
         default: []
+
+  favoritesDeleted:
+    type: object
+    properties:
+      message:
+        type: string
+        default: Sermon successfully removed from the favorites list
+      statusCode:
+        type: number
+        default: 201
+
+  favoritesCreated:
+    type: object
+    properties:
+      createdAt:
+        type: number
+        format: timestamp
+        description: Created at value, on timestamp
+      updatedAt:
+        type: number
+        format: timestamp
+        description: Updated at value, on timestamp
+      id:
+        type: number
+        description: Favorite ID, is unique value
+      user:
+        type: number
+        description: Author of the favorite register
+      sermon:
+        type: number
+        description: Sermon ID, is unique value
 
   UserCredentials:
     type: object
