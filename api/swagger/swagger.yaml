@@ -498,7 +498,7 @@ definitions:
       statusCode:
         type: number
 
-    deleteComments:
+  deleteComments:
     type: object
     properties:
       message:
