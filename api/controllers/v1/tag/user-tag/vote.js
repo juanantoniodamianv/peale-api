@@ -59,7 +59,7 @@ module.exports = {
           if (wasCreated) {
             console.log(`successfully created vote. ${tagVote}`)
           } else if (tagVote !== undefined) {
-            tagVote = await TagVote.update({ id: tagVote.id }).set({ vote: tagVote.vote + 1 }).fetch();
+            tagVote = await UserTagVote.update({ id: tagVote.id }).set({ vote: tagVote.vote + 1 }).fetch();
             console.log(`successfully updated vote. ${tagVote}`)
           }
         })
