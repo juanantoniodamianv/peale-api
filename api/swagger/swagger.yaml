@@ -541,7 +541,7 @@ definitions:
   CommentPost:
     type: object
     properties:
-      comment:
+      commentary:
         type: string
         description: Comment string
 
