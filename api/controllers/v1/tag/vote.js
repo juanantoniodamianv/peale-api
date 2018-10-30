@@ -30,8 +30,8 @@ module.exports = {
     },
 
     notFound: {
-      statusCode: 400,
-      description: 'Error.'
+      statusCode: 404,
+      description: 'Not Found.'
     },
 
     unauthorized: {
