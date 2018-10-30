@@ -18,7 +18,7 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode: 201,
+      statusCode: 200,
       description: 'Favorites successfully removed from the list',
     },
 
@@ -45,7 +45,7 @@ module.exports = {
 
     var successData = {
       "message": 'Favorites successfully removed from the list',
-      "statusCode": 201
+      "statusCode": 200
     }
     return exits.success(successData);
   }

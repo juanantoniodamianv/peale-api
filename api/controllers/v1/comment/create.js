@@ -19,7 +19,7 @@ module.exports = {
     commentary: {
       type: "string",
       required: true,
-      example: 'This is a commentary for one sermon file.',
+      example: 'This is a commentary for one sermon file',
       description: 'Commentary'
     }
 
@@ -29,12 +29,12 @@ module.exports = {
   exits: {
     success: {
       statusCode: 200,
-      description: 'Commentary has been created successfully.',
+      description: 'Comment has been added successfully',
     },
 
     unauthorized: {
       statusCode: 401,
-      description: 'Unauthorized request.',
+      description: 'Unauthorized request',
     },
   },
 
@@ -43,10 +43,12 @@ module.exports = {
     var current_user = JSON.stringify(this.req.current_user[0].id)
     var comment = await Comment.create({ commentary: inputs.commentary, sermon: inputs.id, author: current_user }).fetch();
 
-    if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
+    if (comment.length === 0) { return exits.unauthorized({ "message": "Unauthorized request", "statusCode": 401 }) }
 
     var responseData = {
-      comment
+      comment,
+      "message": 'Comment has been added successfully',
+      "statusCode": 200
     }
     return exits.success(responseData);
   }

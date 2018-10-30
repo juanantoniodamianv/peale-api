@@ -28,13 +28,13 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode: 202,
-      description: 'Commentary has been deleted successfully.',
+      statusCode: 200,
+      description: 'Comment has been deleted successfully',
     },
 
     unauthorized: {
       statusCode: 401,
-      description: 'Unauthorized request.',
+      description: 'Unauthorized request',
     },
   },
 
@@ -42,18 +42,17 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     var current_user = JSON.stringify(this.req.current_user[0].id);
-
     var commentUserId = await Comment.findOne({ id: inputs.commentId });
-
-    if (current_user != commentUserId.author) { return exits.unauthorized('Unauthorized request.') }
+    if (current_user != commentUserId.author) { return exits.unauthorized('Unauthorized request') }
 
     var comment = await Comment.destroy({ id: commentUserId.id }).fetch();
+    if (comment.length === 0) { return exits.unauthorized('Unauthorized request') }
 
-    if (comment.length === 0) { return exits.unauthorized('Unauthorized request.') }
+    var successData = {
+      "message": 'Comment has been deleted successfully',
+      "statusCode": 200
+    }
 
-    return exits.success(`Commentary has been deleted successfully: ${comment}`);
-
+    return exits.success(successData);
   }
-
-
 };

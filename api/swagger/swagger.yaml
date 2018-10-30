@@ -214,8 +214,8 @@ paths:
 
   /sermons/{id}/comments:
     get:
-      summary: Show all comments by sermon
-      description: Retrieve all comments by sermon id.
+      summary: Show all comments in a sermon
+      description: Retrieve all comments by sermon id
       tags:
       - Comments
       parameters:
@@ -226,29 +226,29 @@ paths:
         required: true
       responses:
         200: 
-          description: Commentary has been updated successfully.
+          description: Comment has been retrieved successfully
           schema:
-            type: array
+            type: object
             items:
-              $ref: '#/definitions/Comments'
+              $ref: '#/definitions/getComments'
         401:
-          description: Unauthorized request.
+          description: Unauthorized request
           schema:
             $ref: '#definitions/Error'
     post:
-      summary: Create comment for the sermon
-      description: Create comment for the sermon.
+      summary: Create new comment in a sermon
+      description: Add new comment to a sermon
       security:
         - accessToken: []
       parameters:
       - in: path
         name: id
-        description: The sermon id.
+        description: The sermon id
         type: number
         required: true
       - in: body
         name: commentary
-        description: The commentary for the sermon
+        description: The comment to be added to the sermon
         required: true
         schema:
           $ref: '#/definitions/CommentPost'
@@ -256,9 +256,9 @@ paths:
       - Comments
       responses:
         200:
-          description: Comment created successfully
+          description: Comment has been created successfully
           schema: 
-            $ref: '#definitions/Comments'
+            $ref: '#definitions/postComments'
         default:
           description: Unexpected error
           schema:
@@ -266,60 +266,62 @@ paths:
   
   /sermons/{id}/comments/{commentId}:
     put:
-      summary: Update comment for the sermon
-      description: Update comment for the sermon.
+      summary: Update a comment in a sermon
+      description: Update existing comment in a sermon
       security:
         - accessToken: []
       parameters:
       - in: path
         name: id
-        description: The sermon id.
+        description: The sermon id
         type: string
         required: true
       - in: path
         name: commentId
-        description: The comment id.
+        description: The comment id
         type: string
         required: true
       - in: body
         name: commentary
-        description: The commentary for the sermon
+        description: The new comment to be updated
         required: true
         schema:
           $ref: '#/definitions/CommentPost'
       tags:
       - Comments
       responses:
-        200:
-          description: Comment updated successfully
+        201:
+          description: Comment has been updated successfully
           schema:
-            $ref: '#definitions/Comments'
+            $ref: '#definitions/postComments'
         default:
           description: Unexpected error
           schema:
             $ref: '#definitions/Error'
     
     delete:
-      summary: Delete comment for the sermon
-      description: Delete comment for the sermon.
+      summary: Delete a comment in a sermon
+      description: Delete an existing comment in a sermon
       security:
         - accessToken: []
       parameters:
       - in: path
         name: id
-        description: The sermon id.
+        description: The sermon id
         type: number
         required: true
       - in: path
         name: commentId
-        description: The comment id.
+        description: The comment id
         type: number
         required: true
       tags:
       - Comments
       responses:
         200:
-          description: Comment destroyed successfully
+          description: Comment has been deleted successfully
+          schema:
+            $ref: '#definitions/deleteComments'
         default:
           description: Unexpected error
           schema:
@@ -472,6 +474,45 @@ definitions:
         type: number
         description: Sermon ID
 
+  getComments:
+    type: object
+    properties:
+      comments:
+        type: object
+        $ref: '#definitions/Comments'
+      skip:
+        type: number
+      limit:
+        type: number
+      count:
+        type: number
+
+  postComments:
+    type: object
+    properties:
+      comment:
+        type: object
+        $ref: '#definitions/Comments'
+      message:
+        type: string
+      statusCode:
+        type: number
+
+    deleteComments:
+    type: object
+    properties:
+      message:
+        type: string
+      statusCode:
+        type: number
+
+  CommentPost:
+    type: object
+    properties:
+      commentary:
+        type: string
+        description: Comment string
+
   Author:
     type: object
     properties:
@@ -542,13 +583,6 @@ definitions:
       sermon:
         type: object
         description: Sermons object
-
-  CommentPost:
-    type: object
-    properties:
-      commentary:
-        type: string
-        description: Comment string
 
   voteTag:
     type: object
