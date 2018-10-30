@@ -542,6 +542,7 @@ definitions:
       tag:
         type: array
         description: Array of tags to be voted
+        default: []
 
   UserCredentials:
     type: object
