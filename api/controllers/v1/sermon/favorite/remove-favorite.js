@@ -9,8 +9,8 @@ module.exports = {
 
   inputs: {
     id: {
-      description: 'Sermon ID',
-      type: 'string',
+      description: 'Sermon IDs',
+      type: 'ref',
       required: true
     }
   },
@@ -19,32 +19,34 @@ module.exports = {
   exits: {
     success: {
       statusCode: 201,
-      description: 'Sermon successfully removed from my favorites.',
+      description: 'Favorites successfully removed from the list',
     },
 
     notFound: {
       statusCode: 404,
-      description: 'Sermon is not added to my favorites.'
+      description: 'One or more sermons are not added to the favorites'
     },
 
     unauthorized: {
       statusCode: 401,
-      description: 'Unauthorized request.',
+      description: 'Unauthorized request',
     },
   },
 
 
   fn: async function (inputs, exits) {
-
+    var favIds = Array.from(inputs.id);
     var current_user = JSON.stringify(this.req.current_user[0].id)
-    var destroyed = await Favorite.destroy({ user: current_user, sermon: inputs.id }).fetch();
+    await Promise.all(favIds.map(async (favId) => {
+      Favorite.destroy({ user: current_user, sermon: favId }).fetch()
+        .exec(async (err) => {
+        })
+    }));
 
-    if (destroyed.length === 0) {
-      return exits.notFound('Sermon is not added to my favorites.');
+    var successData = {
+      "message": 'Favorites successfully removed from the list',
+      "statusCode": 201
     }
-
-    return exits.success('Sermon successfully removed from my favorites.');
-
+    return exits.success(successData);
   }
-
 };

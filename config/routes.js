@@ -48,7 +48,7 @@ module.exports.routes = {
   /* Get all favorites, Add/Remove Sermon from my favorites list */
   'GET /v1/sermons/favorite': { action: 'v1/sermon/favorite/index' },
   'POST /v1/sermons/:id/favorite': { action: 'v1/sermon/favorite/add-favorite' },
-  'DELETE /v1/sermons/:id/favorite': { action: 'v1/sermon/favorite/remove-favorite' },
+  'DELETE /v1/sermons/favorite': { action: 'v1/sermon/favorite/remove-favorite' },
 
   /* Create/Delete/Edit/Index Comments */
   'GET /v1/sermons/:id/comments': { action: 'v1/comment/index' },
