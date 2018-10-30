@@ -17,12 +17,12 @@ securityDefinitions:
 paths:
   /signin:
     put:
-      summary: User signin.
-      description: Sign in using the provided email and password combination.
+      summary: User signin
+      description: Sign in using the provided email and password combination
       parameters:
       - name: UserCredentials
         in: body
-        description: Username or Email account and credentials.
+        description: Username or Email account and credentials
         required: true
         schema:
           $ref: '#/definitions/UserCredentials'
@@ -39,12 +39,12 @@ paths:
             $ref: '#/definitions/Error'
   /signup:
     post:
-      summary: User signup.
-      description: Sign up using the provided username/email, password and password confirm.
+      summary: User signup
+      description: Sign up using the provided username/email, password and password confirm
       parameters:
       - name: UserCredentialsSignUp
         in: body
-        description: Username or Email account, Password and Password Confirm.
+        description: Username or Email account, Password and Password Confirm
         required: true
         schema:
           $ref: '#/definitions/UserCredentialsSignUp'
@@ -52,7 +52,7 @@ paths:
       - Session
       responses:
         201:
-          description: Account created successfully.
+          description: Account created successfully
           schema:
             $ref: '#/definitions/SessionNew'
         default:
@@ -62,11 +62,11 @@ paths:
   /forgot-password:
     post:
       summary: Forgot password
-      description: This action attempts to recovery password for one user account with the email/username provided.
+      description: This action attempts to recovery password for one user account with the email/username provided
       parameters:
       - name: UsernameForgotPassword
         in: body
-        description: Username/Email for forgot password recovery.
+        description: Username/Email for forgot password recovery
         required: true
         schema:
           $ref: '#/definitions/UsernameForgotPassword'
@@ -74,7 +74,7 @@ paths:
       - Session
       responses:
         201:
-          description: An email has been sent, please check your inbox.
+          description: An email has been sent, please check your inbox
         default:
           description: Unexpected error
           schema:
@@ -84,14 +84,14 @@ paths:
   /refresh-token:
     post:
       summary: Refresh Token
-      description:  Verify token is valid and if it expired, sign new token(with old tokens payload) and response it.
+      description:  Verify token is valid and if it expired, sign new token(with old tokens payload) and response it
       security:
         - accessToken: []
       tags:
       - Session
       responses:
         201:
-          description: Token and refresh token are generated successfully.
+          description: Token and refresh token are generated successfully
           schema:
             $ref: '#/definitions/SessionNew'
         default:
@@ -101,34 +101,34 @@ paths:
 
   /sermons:
     get:
-      summary: List of all sermons.
-      description: Retrieve all sermons data.
+      summary: List of all sermons
+      description: Retrieve all sermons data
       security:
         - accessToken: []
       tags:
       - Sermons
       responses:
         200:
-          description: All sermons retrieved successfully.
+          description: All sermons retrieved successfully
           schema:
             type: array
             items:
               $ref: '#/definitions/Sermons'
         401:
-          description: Unauthorized request.
+          description: Unauthorized request
           schema:
             $ref: '#/definitions/Error'
 
   /sermons/{id}:
     put:
-      summary: Increase views count, mark a sermon as played.
-      description: Increase views count and if bearer token exist, mark a Sermon as played by a current user.
+      summary: Increase views count, mark a sermon as played
+      description: Increase views count and if bearer token exist, mark a Sermon as played by a current user
       security:
         - accessToken: []
       parameters:
       - in: path
         name: id
-        description: The sermon id.
+        description: The sermon id
         type: string
         required: true
       tags:
@@ -150,7 +150,7 @@ paths:
       - Tags
       responses:
         200: 
-          description: All tags retrieved successfully.
+          description: All tags retrieved successfully
           schema:
             type: array
             items:
@@ -162,19 +162,19 @@ paths:
 
   /tags/{id}:
     get:
-      summary: Show one tag.
-      description: Tag retrieved successfully.
+      summary: Show one tag
+      description: Tag retrieved successfully
       parameters:
       - in: path
         name: id
-        description: The tag id.
+        description: The tag id
         type: string
         required: true
       tags:
       - Tags
       responses:
         200: 
-          description: Tag retrieved successfully.
+          description: Tag retrieved successfully
           schema:
             type: object
             $ref: '#/definitions/TagsComplete'
@@ -205,7 +205,7 @@ paths:
       - Tags
       responses:
         200: 
-          description: Tag voted successfully.
+          description: Tag voted successfully
         default:
           description: Unexpected error
           schema:
@@ -221,16 +221,14 @@ paths:
       parameters:
       - in: path
         name: id
-        description: The sermon id.
+        description: The sermon id
         type: number
         required: true
       responses:
         200: 
           description: Comment has been retrieved successfully
-          schema:
-            type: object
-            items:
-              $ref: '#/definitions/getComments'
+          schema: 
+            $ref: '#definitions/getComments'
         401:
           description: Unauthorized request
           schema:
@@ -330,25 +328,29 @@ paths:
 
   /sermons/{id}/favorite:
     post:
-      summary: Add one sermon to my favorites list.
-      description: Add one sermon to my favorites list.
+      summary: Add one sermon to my favorites list
+      description: Add one sermon to my favorites list
       security:
         - accessToken: []
       parameters:
       - in: path
         name: id
-        description: The sermon id.
+        description: The sermon id
         type: string
         required: true
       tags:
       - Favorites
       responses:
         200:
-          description: Sermon successfully added to my favorites.
+          description: Sermon successfully added to my favorites
+          schema:
+            $ref: '#definitions/favoritesCreated'
         201:
-          description: Sermon already added to my favorites.
+          description: Sermon already added to my favorites
+          schema:
+            $ref: '#definitions/favoritesCreated'
         401:
-          description: Unauthorized request.
+          description: Unauthorized request
 
     delete:
       summary: Remove sermons from the favorite list
@@ -371,27 +373,27 @@ paths:
             type: object
             $ref: '#/definitions/favoritesDeleted'
         404:
-          description: Sermon is not added to my favorites.
+          description: Sermon is not added to my favorites
         401:
-          description: Unauthorized request.
+          description: Unauthorized request
 
   /sermons/favorite:
     get:
-      summary: retrieve all sermons from my favorite list.
-      description: retrieve all sermons from my favorite list.
+      summary: retrieve all sermons from my favorite list
+      description: retrieve all sermons from my favorite list
       security:
         - accessToken: []
       tags:
       - Favorites
       responses:
         200:
-          description: All favorites successfully retrieved.
+          description: All favorites successfully retrieved
           schema:
             type: array
             items:
               $ref: '#/definitions/Sermons'
         401:
-          description: Unauthorized request.
+          description: Unauthorized request
           schema:
             $ref: '#/definitions/Error'
 
@@ -403,26 +405,26 @@ definitions:
       createdAt:
         type: number
         format: timestamp
-        description: Created at value, on timestamp.
+        description: Created at value, on timestamp
       updatedAt:
         type: number
         format: timestamp
-        description: Updated at value, on timestamp.
+        description: Updated at value, on timestamp
       id:
         type: number
-        description: Sermon ID, is unique value.
+        description: Sermon ID, is unique value
       fileName:
         type: string
-        description: File Name of Sermon, is unique value.
+        description: File Name of Sermon, is unique value
       date:
         type: string
         format: date
       title:
         type: string
-        description: Tile of Sermon.
+        description: Tile of Sermon
       description: 
         type: string
-        description: A little description for Sermon file.
+        description: A little description for Sermon file
       bibleVerse:
         type: string
       bibleVerseText: 
@@ -431,25 +433,25 @@ definitions:
         type: string
       views:
         type: number
-        description: Number of times the Sermon has been seen.
+        description: Number of times the Sermon has been seen
       played:
         type: boolean
-        description: Indicates whether the sermon has been seen or not.
+        description: Indicates whether the sermon has been seen or not
       isFavorite:
         type: boolean
-        description: Indicates whether the sermon is favorite or not.
+        description: Indicates whether the sermon is favorite or not
       comments: 
         type: number
-        description: Count value from comments for one sermon.
+        description: Count value from comments for one sermon
       tags:
         type: array
         items:
           $ref: '#definitions/Tags'
-        description: Associated tags.
+        description: Associated tags
       media:
         type: object
         $ref: '#definitions/Media'
-        description: Multimedia data.
+        description: Multimedia data
 
   Comments:
     type: object
@@ -457,14 +459,14 @@ definitions:
       createdAt:
         type: number
         format: timestamp
-        description: Created at value, on timestamp.
+        description: Created at value, on timestamp
       updatedAt:
         type: number
         format: timestamp
-        description: Updated at value, on timestamp.
+        description: Updated at value, on timestamp
       id:
         type: number
-        description: Comment ID, is unique value.
+        description: Comment ID, is unique value
       commentary:
         type: string
       author:
@@ -545,11 +547,11 @@ definitions:
       createdAt:
         type: number
         format: timestamp
-        description: Created at value, on timestamp.
+        description: Created at value, on timestamp
       updatedAt:
         type: number
         format: timestamp
-        description: Updated at value, on timestamp.
+        description: Updated at value, on timestamp
       id:
         type: number
       name:
@@ -566,6 +568,16 @@ definitions:
       statusCode:
         type: number
         default: 201
+
+  favoritesCreated:
+    type: object
+    properties:
+      message:
+        type: string
+        default: Sermon successfully added to my favorites
+      statusCode:
+        type: number
+        default: 200
 
   Media:
     type: object
@@ -648,14 +660,14 @@ definitions:
           createdAt:
             type: number
             format: timestamp
-            description: Created at value, on timestamp.
+            description: Created at value, on timestamp
           updatedAt:
             type: number
             format: timestamp
-            description: Updated at value, on timestamp.
+            description: Updated at value, on timestamp
           id:
             type: number
-            description: Sermon ID, is unique value.
+            description: Sermon ID, is unique value
           username:
             type: string
           firstName:

@@ -47,7 +47,7 @@ module.exports = {
 
     var responseData = {
       comment,
-      "message": 'Comment has been added successfully',
+      "message": 'Comment has been created successfully',
       "statusCode": 200
     }
     return exits.success(responseData);
