@@ -32,6 +32,11 @@ module.exports = {
       description: 'Comment has been deleted successfully',
     },
 
+    notFound: {
+      statusCode: 400,
+      description: 'Comment could not be destroyed'
+    },
+
     unauthorized: {
       statusCode: 401,
       description: 'Unauthorized request',
@@ -45,8 +50,8 @@ module.exports = {
     var commentUserId = await Comment.findOne({ id: inputs.commentId });
     if (current_user != commentUserId.author) { return exits.unauthorized('Unauthorized request') }
 
-    var comment = await Comment.destroy({ id: commentUserId.id }).fetch();
-    if (comment.length === 0) { return exits.unauthorized('Unauthorized request') }
+    var comment = await Comment.destroy({ id: inputs.commentId }).fetch();
+    if (comment.length === 0) { return exits.notFound('Comment could not be destroyed') }
 
     var successData = {
       "message": 'Comment has been deleted successfully',
